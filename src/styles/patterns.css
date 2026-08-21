@@ -1,0 +1,22 @@
+/* ZANDO — Motifs de fond.
+   Deux trames empruntées au champ : les sillons d'une parcelle labourée et
+   l'alignement régulier des semis. Elles ne couvrent pas la page ; elles
+   marquent quelques surfaces choisies, listées dans le README. */
+
+:root {
+  --pattern-furrow: rgba(23, 107, 58, .09);
+  --pattern-seed: rgba(23, 107, 58, .13);
+
+  /* Sillons : rangs obliques, comme une parcelle vue du bord de la route. */
+  --pattern-furrows: repeating-linear-gradient(
+    -45deg,
+    var(--pattern-furrow) 0,
+    var(--pattern-furrow) 1px,
+    transparent 1px,
+    transparent 9px
+  );
+
+  /* Semis : graines espacées à intervalle régulier. */
+  --pattern-seeds: radial-gradient(var(--pattern-seed) 1.2px, transparent 1.2px);
+  --pattern-seeds-size: 18px 18px;
+}

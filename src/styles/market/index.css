@@ -1,0 +1,5 @@
+/* Feuille de style de la page Marché */
+
+@import "../shared.css";
+@import "./market.css";
+@import "./responsive.css";

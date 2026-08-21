@@ -1,0 +1,1139 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Tomates fraîches",
+      "categoryId": "legumes",
+      "producerId": "p1",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "price": 1500,
+      "unit": "panier",
+      "priceYesterday": 1700,
+      "stock": 120,
+      "stockUnit": "paniers",
+      "image": "https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.8,
+      "reviews": 27,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Tomates de plein champ récoltées le matin même. Calibre régulier, chair ferme, idéales pour la revente au détail comme pour la sauce.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1629398781739-9caec1eb9409?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1629398781739-9caec1eb9409?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1629398781484-5e0035f934fa?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1629398781484-5e0035f934fa?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1588230737595-d49e490bff1c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1588230737595-d49e490bff1c?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1629399136776-4c47a4c9f64c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1629399136776-4c47a4c9f64c?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Roma",
+      "conservation": "5 à 7 jours au frais",
+      "ordersCount": 127,
+      "priceUpdatedAt": "06:15"
+    },
+    {
+      "id": "2",
+      "name": "Carottes",
+      "categoryId": "legumes",
+      "producerId": "p3",
+      "zone": "Pool",
+      "city": "Mindouli",
+      "price": 1200,
+      "unit": "tas",
+      "priceYesterday": 1200,
+      "stock": 80,
+      "stockUnit": "tas",
+      "image": "https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.6,
+      "reviews": 18,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Carottes de Mindouli, lavées et bottelées. Un tas correspond à environ 3 kg.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1633380110125-f6e685676160?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1633380110125-f6e685676160?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Nantaise",
+      "conservation": "1 à 2 semaines au frais",
+      "ordersCount": 84,
+      "priceUpdatedAt": "06:40"
+    },
+    {
+      "id": "3",
+      "name": "Poivrons verts",
+      "categoryId": "legumes",
+      "producerId": "p4",
+      "zone": "Bouenza",
+      "city": "Madingou",
+      "price": 1800,
+      "unit": "panier",
+      "priceYesterday": 1650,
+      "stock": 60,
+      "stockUnit": "paniers",
+      "image": "https://images.unsplash.com/photo-1739159192920-7124e3babcaf?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1739159192920-7124e3babcaf?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.7,
+      "reviews": 21,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Poivrons verts épais, sans taches. Se conservent quatre à cinq jours à l'ombre.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1739159192920-7124e3babcaf?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1739159192920-7124e3babcaf?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1585159079680-8dec029b76ed?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1585159079680-8dec029b76ed?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1622376242797-538aa64a9d38?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1622376242797-538aa64a9d38?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1663500004095-a7482241694c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1663500004095-a7482241694c?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1611746985643-358d75ed70fe?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1611746985643-358d75ed70fe?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Doux long",
+      "conservation": "4 à 6 jours au frais",
+      "ordersCount": 71,
+      "priceUpdatedAt": "07:05"
+    },
+    {
+      "id": "4",
+      "name": "Oignons rouges",
+      "categoryId": "legumes",
+      "producerId": "p2",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "price": 1000,
+      "unit": "tas",
+      "priceYesterday": 1100,
+      "stock": 90,
+      "stockUnit": "tas",
+      "image": "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.5,
+      "reviews": 24,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Oignons rouges séchés au champ, prêts pour le stockage. Vendus par tas de 2 kg environ.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1585849834908-3481231155e8?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1585849834908-3481231155e8?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1668295037469-8b0e8d11cd2a?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1668295037469-8b0e8d11cd2a?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1683355739329-cea18ba93f02?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1683355739329-cea18ba93f02?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Violet de Galmi",
+      "conservation": "3 à 4 semaines au sec",
+      "ordersCount": 96,
+      "priceUpdatedAt": "07:30"
+    },
+    {
+      "id": "5",
+      "name": "Piments frais",
+      "categoryId": "epices",
+      "producerId": "p1",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "price": 2000,
+      "unit": "tas",
+      "priceYesterday": 2000,
+      "stock": 50,
+      "stockUnit": "tas",
+      "image": "https://images.unsplash.com/photo-1546860255-95536c19724e?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1546860255-95536c19724e?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.9,
+      "reviews": 31,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Piments rouges très forts, cueillis à pleine maturité. Le tas tient dans les deux mains.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1546860255-95536c19724e?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1546860255-95536c19724e?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1622993361024-ae1c39cda16c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1622993361024-ae1c39cda16c?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1722782034797-d1dc4157026e?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1722782034797-d1dc4157026e?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1707857204225-b526447975ab?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1707857204225-b526447975ab?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1566045023256-fb2339a82526?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1566045023256-fb2339a82526?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Piment fort local",
+      "conservation": "5 à 7 jours au frais",
+      "ordersCount": 142,
+      "priceUpdatedAt": "07:55"
+    },
+    {
+      "id": "6",
+      "name": "Aubergines",
+      "categoryId": "legumes",
+      "producerId": "p4",
+      "zone": "Bouenza",
+      "city": "Madingou",
+      "price": 1200,
+      "unit": "panier",
+      "priceYesterday": 1350,
+      "stock": 70,
+      "stockUnit": "paniers",
+      "image": "https://images.unsplash.com/photo-1784039484509-bedb3e576928?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1784039484509-bedb3e576928?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.4,
+      "reviews": 14,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Aubergines locales à peau brillante, sans amertume. Panier de 5 kg.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1784039484509-bedb3e576928?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1784039484509-bedb3e576928?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1617692913859-e492ea72afb7?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1617692913859-e492ea72afb7?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1782973048144-c22e2300e14a?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1782973048144-c22e2300e14a?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1556710808-82cd72c59f63?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1556710808-82cd72c59f63?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1775825772713-bb00c46ba71c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1775825772713-bb00c46ba71c?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Violette longue",
+      "conservation": "4 à 5 jours au frais",
+      "ordersCount": 58,
+      "priceUpdatedAt": "08:20"
+    },
+    {
+      "id": "7",
+      "name": "Choux pommés",
+      "categoryId": "legumes",
+      "producerId": "p5",
+      "zone": "Bouenza",
+      "city": "Mouyondzi",
+      "price": 800,
+      "unit": "pièce",
+      "priceYesterday": 800,
+      "stock": 150,
+      "stockUnit": "pièces",
+      "image": "https://images.unsplash.com/photo-1611105637889-3afd7295bdbf?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1611105637889-3afd7295bdbf?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.6,
+      "reviews": 26,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Choux pommés bien serrés du plateau de Mouyondzi. Poids moyen 1,5 kg la pièce.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1611105637889-3afd7295bdbf?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1611105637889-3afd7295bdbf?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1652860213441-6622f9fec77f?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1652860213441-6622f9fec77f?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1640958904159-51ae08bd3412?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1640958904159-51ae08bd3412?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1591586007768-40725cc562a1?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1591586007768-40725cc562a1?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Cœur de bœuf",
+      "conservation": "1 à 2 semaines au frais",
+      "ordersCount": 110,
+      "priceUpdatedAt": "08:45"
+    },
+    {
+      "id": "8",
+      "name": "Manioc frais",
+      "categoryId": "tubercules",
+      "producerId": "p3",
+      "zone": "Pool",
+      "city": "Mindouli",
+      "price": 900,
+      "unit": "tas",
+      "priceYesterday": 950,
+      "stock": 60,
+      "stockUnit": "tas",
+      "image": "https://images.unsplash.com/photo-1757283961570-682154747d9c?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1757283961570-682154747d9c?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.7,
+      "reviews": 29,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Manioc déterré du jour, à transformer sous 48 h. Tas de 5 à 6 tubercules.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1757283961570-682154747d9c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1757283961570-682154747d9c?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1757281096972-10fd02b0f5ea?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1757281096972-10fd02b0f5ea?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1757283961544-e161ac41b201?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1757283961544-e161ac41b201?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1764143914716-3524db64940e?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1764143914716-3524db64940e?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1786787726635-e084555e4100?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1786787726635-e084555e4100?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Manioc doux",
+      "conservation": "48 h après récolte",
+      "ordersCount": 134,
+      "priceUpdatedAt": "06:15"
+    },
+    {
+      "id": "9",
+      "name": "Feuilles de manioc",
+      "categoryId": "feuilles",
+      "producerId": "p1",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "price": 500,
+      "unit": "botte",
+      "priceYesterday": 500,
+      "stock": 200,
+      "stockUnit": "bottes",
+      "image": "https://images.unsplash.com/photo-1550411294-875307bccdd5?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1550411294-875307bccdd5?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.8,
+      "reviews": 37,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Saka-saka déjà trié et lavé. Botte de 500 g, pilée sur demande sans supplément.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1550411294-875307bccdd5?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1550411294-875307bccdd5?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1617884638394-d9eef1b0f40e?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1617884638394-d9eef1b0f40e?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1685504513848-df0dd6893cec?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1685504513848-df0dd6893cec?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Saka-saka",
+      "conservation": "2 à 3 jours au frais",
+      "ordersCount": 188,
+      "priceUpdatedAt": "06:40"
+    },
+    {
+      "id": "10",
+      "name": "Gombos",
+      "categoryId": "legumes",
+      "producerId": "p6",
+      "zone": "Bouenza",
+      "city": "Loudima",
+      "price": 1300,
+      "unit": "panier",
+      "priceYesterday": 1200,
+      "stock": 45,
+      "stockUnit": "paniers",
+      "image": "https://images.unsplash.com/photo-1558408525-1092038389ae?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1558408525-1092038389ae?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.5,
+      "reviews": 12,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Gombos jeunes et tendres, cassants à la pression. Panier de 3 kg.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1558408525-1092038389ae?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1558408525-1092038389ae?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1617692913859-e492ea72afb7?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1617692913859-e492ea72afb7?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1759860002366-0d8dd828742c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1759860002366-0d8dd828742c?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1624668430039-0175a0fbf006?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1624668430039-0175a0fbf006?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Clemson",
+      "conservation": "3 à 4 jours au frais",
+      "ordersCount": 46,
+      "priceUpdatedAt": "07:05"
+    },
+    {
+      "id": "11",
+      "name": "Bananes plantains",
+      "categoryId": "fruits",
+      "producerId": "p5",
+      "zone": "Bouenza",
+      "city": "Mouyondzi",
+      "price": 2500,
+      "unit": "régime",
+      "priceYesterday": 2700,
+      "stock": 40,
+      "stockUnit": "régimes",
+      "image": "https://images.unsplash.com/photo-1552709607-08d00227833d?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1552709607-08d00227833d?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.7,
+      "reviews": 23,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Régimes de plantains verts, bons pour le transport. Mûrissent en quatre à six jours.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1552709607-08d00227833d?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1552709607-08d00227833d?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1620036924477-c3d6e9ce36fc?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1620036924477-c3d6e9ce36fc?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1668968554885-c08ad72c2133?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1668968554885-c08ad72c2133?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1619995750009-5256e91437b0?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1619995750009-5256e91437b0?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1617631716600-6a454b430367?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1617631716600-6a454b430367?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Plantain corne",
+      "conservation": "4 à 6 jours à l’ombre",
+      "ordersCount": 92,
+      "priceUpdatedAt": "07:30"
+    },
+    {
+      "id": "12",
+      "name": "Ananas",
+      "categoryId": "fruits",
+      "producerId": "p6",
+      "zone": "Bouenza",
+      "city": "Loudima",
+      "price": 700,
+      "unit": "pièce",
+      "priceYesterday": 700,
+      "stock": 110,
+      "stockUnit": "pièces",
+      "image": "https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.9,
+      "reviews": 28,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Ananas sucrés de Loudima, coupés à maturité. Calibre moyen, 1,2 kg la pièce.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1550828520-4cb496926fc9?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1589820296156-2454bb8a6ad1?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1589820296156-2454bb8a6ad1?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1490885578174-acda8905c2c6?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1621409443141-46c42dc0afb5?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1621409443141-46c42dc0afb5?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Cayenne lisse",
+      "conservation": "5 à 8 jours au frais",
+      "ordersCount": 118,
+      "priceUpdatedAt": "07:55"
+    },
+    {
+      "id": "13",
+      "name": "Arachides décortiquées",
+      "categoryId": "cereales",
+      "producerId": "p3",
+      "zone": "Pool",
+      "city": "Mindouli",
+      "price": 1600,
+      "unit": "kg",
+      "priceYesterday": 1550,
+      "stock": 85,
+      "stockUnit": "kg",
+      "image": "https://images.unsplash.com/photo-1549978113-29eb25c8177f?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1549978113-29eb25c8177f?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.6,
+      "reviews": 20,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Arachides séchées au soleil et triées à la main. Sac de 25 kg disponible sur commande.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1549978113-29eb25c8177f?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1549978113-29eb25c8177f?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1575399872095-9363bf262e64?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1575399872095-9363bf262e64?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1524594345772-c953a3ae53e8?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1524594345772-c953a3ae53e8?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1546545584-c03ac781caaf?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1546545584-c03ac781caaf?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1639070863891-a20035caf05a?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1639070863891-a20035caf05a?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Arachide de Mindouli",
+      "conservation": "3 mois au sec",
+      "ordersCount": 63,
+      "priceUpdatedAt": "08:20"
+    },
+    {
+      "id": "14",
+      "name": "Patates douces",
+      "categoryId": "tubercules",
+      "producerId": "p4",
+      "zone": "Bouenza",
+      "city": "Madingou",
+      "price": 1100,
+      "unit": "tas",
+      "priceYesterday": 1100,
+      "stock": 75,
+      "stockUnit": "tas",
+      "image": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.5,
+      "reviews": 17,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Patates douces à chair orange, récoltées cette semaine. Tas de 4 kg.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1744659749700-c4213f840355?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1744659749700-c4213f840355?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1570723735746-c9bd51bd7c40?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1570723735746-c9bd51bd7c40?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1584699006710-3ad3b82fce7f?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1584699006710-3ad3b82fce7f?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1680472628312-9ff2605ee718?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1680472628312-9ff2605ee718?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Chair orange",
+      "conservation": "2 à 3 semaines au sec",
+      "ordersCount": 77,
+      "priceUpdatedAt": "08:45"
+    },
+    {
+      "id": "15",
+      "name": "Gingembre frais",
+      "categoryId": "epices",
+      "producerId": "p2",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "price": 2200,
+      "unit": "kg",
+      "priceYesterday": 2400,
+      "stock": 30,
+      "stockUnit": "kg",
+      "image": "https://images.unsplash.com/photo-1630623093145-f606591c2546?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1630623093145-f606591c2546?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.8,
+      "reviews": 15,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Gingembre parfumé, rhizomes fermes. Se conserve trois semaines au sec.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1630623093145-f606591c2546?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1630623093145-f606591c2546?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1599940859674-a7fef05b94ae?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1599940859674-a7fef05b94ae?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1603431777782-912e3b76f60d?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1603431777782-912e3b76f60d?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1635843104103-ddd88e1c5141?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1635843104103-ddd88e1c5141?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1615484478243-c94e896edbae?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1615484478243-c94e896edbae?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Gingembre local",
+      "conservation": "3 semaines au sec",
+      "ordersCount": 51,
+      "priceUpdatedAt": "06:15"
+    },
+    {
+      "id": "16",
+      "name": "Avocats",
+      "categoryId": "fruits",
+      "producerId": "p6",
+      "zone": "Bouenza",
+      "city": "Loudima",
+      "price": 1400,
+      "unit": "panier",
+      "priceYesterday": 1400,
+      "stock": 55,
+      "stockUnit": "paniers",
+      "image": "https://images.unsplash.com/photo-1691657915865-d7b9a6a54e6f?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1691657915865-d7b9a6a54e6f?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.6,
+      "reviews": 19,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Avocats fermes à faire mûrir. Panier de 12 à 15 pièces selon le calibre.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1691657915865-d7b9a6a54e6f?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1691657915865-d7b9a6a54e6f?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1612506266679-606568a33215?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1612506266679-606568a33215?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1671624749229-7d37826013b5?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1671624749229-7d37826013b5?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Fuerte",
+      "conservation": "4 à 7 jours à maturité",
+      "ordersCount": 69,
+      "priceUpdatedAt": "06:40"
+    },
+    {
+      "id": "17",
+      "name": "Mangues",
+      "categoryId": "fruits",
+      "producerId": "p3",
+      "zone": "Pool",
+      "city": "Mindouli",
+      "price": 1000,
+      "unit": "panier",
+      "priceYesterday": 1150,
+      "stock": 95,
+      "stockUnit": "paniers",
+      "image": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.7,
+      "reviews": 25,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Mangues locales juteuses, peu fibreuses. Panier de 8 kg.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1732472581875-89ff83f18439?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1732472581875-89ff83f18439?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1635716279493-d1e30afc25a0?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1635716279493-d1e30afc25a0?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1673010960635-d0d1ad81b90a?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1673010960635-d0d1ad81b90a?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Mangue greffée",
+      "conservation": "4 à 6 jours au frais",
+      "ordersCount": 105,
+      "priceUpdatedAt": "07:05"
+    },
+    {
+      "id": "18",
+      "name": "Amarante",
+      "categoryId": "feuilles",
+      "producerId": "p2",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "price": 600,
+      "unit": "botte",
+      "priceYesterday": 600,
+      "stock": 140,
+      "stockUnit": "bottes",
+      "image": "https://images.unsplash.com/photo-1683536905403-ea18a3176d29?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1683536905403-ea18a3176d29?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.4,
+      "reviews": 11,
+      "harvestedAt": "ce matin",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Amarante (mfumbu) fraîche, feuilles larges. Botte de 400 g lavée.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1683536905403-ea18a3176d29?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1683536905403-ea18a3176d29?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1617884638394-d9eef1b0f40e?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1617884638394-d9eef1b0f40e?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1634731201932-9bd92839bea2?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1634731201932-9bd92839bea2?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1591495746097-8a92864d5c1f?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1591495746097-8a92864d5c1f?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1664883885923-788ba85e3110?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1664883885923-788ba85e3110?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Amarante verte",
+      "conservation": "2 à 3 jours au frais",
+      "ordersCount": 39,
+      "priceUpdatedAt": "07:30"
+    },
+    {
+      "id": "19",
+      "name": "Maïs frais",
+      "categoryId": "cereales",
+      "producerId": "p5",
+      "zone": "Bouenza",
+      "city": "Mouyondzi",
+      "price": 1400,
+      "unit": "sac",
+      "priceYesterday": 1300,
+      "stock": 35,
+      "stockUnit": "sacs",
+      "image": "https://images.unsplash.com/photo-1559631526-5716df3cfacd?auto=format&fit=crop&w=900&q=80",
+      "thumb": "https://images.unsplash.com/photo-1559631526-5716df3cfacd?auto=format&fit=crop&w=400&q=80",
+      "rating": 4.5,
+      "reviews": 13,
+      "harvestedAt": "hier",
+      "dailyPrice": true,
+      "minOrder": 1,
+      "description": "Épis de maïs frais en sac de 20 unités. Grains laiteux, à consommer sous une semaine.",
+      "createdAt": "2026-08-20",
+      "images": [
+        {
+          "full": "https://images.unsplash.com/photo-1559631526-5716df3cfacd?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1559631526-5716df3cfacd?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1634467524884-897d0af5e104?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1634467524884-897d0af5e104?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1531171000775-75f0213ca8a0?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1531171000775-75f0213ca8a0?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1613728913293-c99bb00ef39c?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1613728913293-c99bb00ef39c?auto=format&fit=crop&w=240&q=80"
+        },
+        {
+          "full": "https://images.unsplash.com/photo-1615485291262-eee9f6529056?auto=format&fit=crop&w=1200&q=80",
+          "thumb": "https://images.unsplash.com/photo-1615485291262-eee9f6529056?auto=format&fit=crop&w=240&q=80"
+        }
+      ],
+      "variety": "Maïs jaune local",
+      "conservation": "1 semaine au frais",
+      "ordersCount": 44,
+      "priceUpdatedAt": "07:55"
+    }
+  ],
+  "categories": [
+    {
+      "id": "legumes",
+      "name": "Légumes",
+      "order": 1
+    },
+    {
+      "id": "fruits",
+      "name": "Fruits",
+      "order": 2
+    },
+    {
+      "id": "tubercules",
+      "name": "Tubercules",
+      "order": 3
+    },
+    {
+      "id": "epices",
+      "name": "Épices",
+      "order": 4
+    },
+    {
+      "id": "feuilles",
+      "name": "Feuilles & herbes",
+      "order": 5
+    },
+    {
+      "id": "cereales",
+      "name": "Céréales",
+      "order": 6
+    }
+  ],
+  "producers": [
+    {
+      "id": "p1",
+      "name": "Ferme Moukoko",
+      "contact": "Jean Moukoko",
+      "role": "Producteur maraîcher",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "avatar": "https://images.unsplash.com/photo-1683173909220-666cf974b8de?auto=format&fit=crop&w=200&q=80",
+      "rating": 4.8,
+      "reviews": 27,
+      "since": 2019,
+      "verified": true,
+      "bio": "Maraîcher depuis 2019 à Kinkala. Tomates, piments et légumes feuilles récoltés chaque matin avant 6 h.",
+      "ordersCount": 312
+    },
+    {
+      "id": "p2",
+      "name": "Coopérative Kinkala",
+      "contact": "Antoinette Ngoma",
+      "role": "Responsable coopérative",
+      "zone": "Pool",
+      "city": "Kinkala",
+      "avatar": "https://images.unsplash.com/photo-1646987116480-682aacd6ff32?auto=format&fit=crop&w=200&q=80",
+      "rating": 4.6,
+      "reviews": 41,
+      "since": 2016,
+      "verified": true,
+      "bio": "32 familles productrices réunies pour vendre en gros sans passer par les intermédiaires.",
+      "ordersCount": 468
+    },
+    {
+      "id": "p3",
+      "name": "Les Jardins de Mindouli",
+      "contact": "Pascal Loubaki",
+      "role": "Producteur maraîcher",
+      "zone": "Pool",
+      "city": "Mindouli",
+      "avatar": "https://images.unsplash.com/photo-1596788068873-9ffd5cacd4c4?auto=format&fit=crop&w=200&q=80",
+      "rating": 4.7,
+      "reviews": 19,
+      "since": 2020,
+      "verified": true,
+      "bio": "Carottes, manioc et arachides sur 4 hectares le long de la route nationale 1.",
+      "ordersCount": 205
+    },
+    {
+      "id": "p4",
+      "name": "Ferme Nsona",
+      "contact": "Célestine Nsona",
+      "role": "Productrice",
+      "zone": "Bouenza",
+      "city": "Madingou",
+      "avatar": "https://images.unsplash.com/photo-1534470717-233b39a41c54?auto=format&fit=crop&w=200&q=80",
+      "rating": 4.9,
+      "reviews": 33,
+      "since": 2015,
+      "verified": true,
+      "bio": "Poivrons, aubergines et patates douces livrés deux fois par semaine sur les marchés de Brazzaville.",
+      "ordersCount": 377
+    },
+    {
+      "id": "p5",
+      "name": "Coopérative Mouyondzi",
+      "contact": "Alphonse Bantsimba",
+      "role": "Responsable coopérative",
+      "zone": "Bouenza",
+      "city": "Mouyondzi",
+      "avatar": "https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?auto=format&fit=crop&w=200&q=80",
+      "rating": 4.5,
+      "reviews": 22,
+      "since": 2018,
+      "verified": true,
+      "bio": "Choux, plantains et maïs cultivés par 18 producteurs du plateau de Mouyondzi.",
+      "ordersCount": 254
+    },
+    {
+      "id": "p6",
+      "name": "Ferme Loudima",
+      "contact": "Sylvie Makaya",
+      "role": "Productrice fruitière",
+      "zone": "Bouenza",
+      "city": "Loudima",
+      "avatar": "https://images.unsplash.com/photo-1723922967349-d54aabf4084d?auto=format&fit=crop&w=200&q=80",
+      "rating": 4.7,
+      "reviews": 16,
+      "since": 2021,
+      "verified": false,
+      "bio": "Ananas, avocats et gombos. Récolte à maturité, jamais de cueillette anticipée.",
+      "ordersCount": 163
+    }
+  ],
+  "zones": [
+    {
+      "id": "pool",
+      "name": "Pool",
+      "districts": [
+        "Kinkala",
+        "Mindouli",
+        "Boko"
+      ]
+    },
+    {
+      "id": "bouenza",
+      "name": "Bouenza",
+      "districts": [
+        "Madingou",
+        "Mouyondzi",
+        "Loudima"
+      ]
+    },
+    {
+      "id": "autres",
+      "name": "Autres régions",
+      "districts": [
+        "Plateaux",
+        "Niari"
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "id": "b1",
+      "icon": "sprout",
+      "title": "Produits frais",
+      "text": "du jour"
+    },
+    {
+      "id": "b2",
+      "icon": "handshake",
+      "title": "Prix justes",
+      "text": "sans intermédiaires"
+    },
+    {
+      "id": "b3",
+      "icon": "package",
+      "title": "Achat en gros",
+      "text": "commandes groupées"
+    },
+    {
+      "id": "b4",
+      "icon": "truck",
+      "title": "Livraison rapide",
+      "text": "sur vos marchés"
+    }
+  ],
+  "banner": {
+    "id": "banner",
+    "title": "Soutenez les producteurs du Pool et de la Bouenza",
+    "subtitle": "Des produits frais, des prix justes, plus de revenus pour tous.",
+    "image": "https://images.unsplash.com/photo-1635774855717-0aec182f92cc?auto=format&fit=crop&w=600&q=80"
+  },
+  "user": {
+    "id": "u1",
+    "name": "Grâce",
+    "fullName": "Grâce Bakala",
+    "role": "Acheteuse",
+    "market": "Marché Total",
+    "avatar": "https://images.unsplash.com/photo-1723922967349-d54aabf4084d?auto=format&fit=crop&w=120&q=80"
+  },
+  "cart": [],
+  "orders": [
+    {
+      "id": "CMD-2041",
+      "userId": "u1",
+      "status": "livree",
+      "total": 34500,
+      "itemCount": 5,
+      "createdAt": "2026-08-14",
+      "market": "Marché Total"
+    },
+    {
+      "id": "CMD-2058",
+      "userId": "u1",
+      "status": "en_route",
+      "total": 21800,
+      "itemCount": 3,
+      "createdAt": "2026-08-19",
+      "market": "Marché Poto-Poto"
+    }
+  ],
+  "favorites": [],
+  "support": {
+    "id": "support",
+    "phone": "+242 06 123 45 67",
+    "hours": "Lun – Sam : 8 h – 18 h",
+    "delivery": "Livraison rapide sur les marchés de Poto-Poto, Total et environs.",
+    "deliveryFee": 2000,
+    "freeDeliveryFrom": 50000
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}

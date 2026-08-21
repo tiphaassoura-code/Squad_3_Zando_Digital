@@ -1,0 +1,32 @@
+/* Fiche produit — adaptations par palier */
+
+@media (max-width: 1440px) {
+  .page { padding-left: var(--space-6); padding-right: var(--space-6); }
+}
+
+/* La colonne producteur passe sous la fiche */
+@media (max-width: 1180px) {
+  .product-detail { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .product-detail-aside {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: start;
+  }
+}
+
+/* Photos au-dessus, informations en dessous */
+@media (max-width: 860px) {
+  .product-detail { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
+  .product-detail-title { font-size: var(--text-xl); }
+  .product-detail-price .price-value { font-size: var(--text-2xl); }
+}
+
+@media (max-width: 720px) {
+  .page { padding-left: var(--space-4); padding-right: var(--space-4); }
+  .similar { padding: var(--space-4); }
+  .product-order { grid-template-columns: minmax(0, 1fr); }
+  .gallery-thumb { width: 72px; height: 56px; }
+  .product-detail-price { flex-wrap: wrap; }
+  .producer-stats { gap: var(--space-1); }
+}

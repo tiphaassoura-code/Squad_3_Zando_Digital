@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marché — ZANDO</title>
+  <meta name="description" content="Le marché ZANDO : produits frais du Pool et de la Bouenza, prix du jour et achat en gros directement auprès des producteurs.">
+
+  <link rel="icon" href="/logo-zando-symbole.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/market/index.css">
+</head>
+<body data-page="marche">
+  <a class="skip-link" href="#catalogue">Aller au catalogue</a>
+
+  <header class="header" data-region="header"></header>
+
+  <main class="page" id="marche">
+    <div data-region="promo"></div>
+    <div data-region="breadcrumb"></div>
+    <div data-region="categories"></div>
+
+    <div class="market">
+      <aside class="filters" data-region="filters" aria-label="Filtres du catalogue"></aside>
+
+      <section id="catalogue" aria-label="Catalogue des produits">
+        <div data-region="toolbar"></div>
+        <div class="product-grid" data-region="grid"></div>
+        <div data-region="pagination"></div>
+      </section>
+
+      <aside class="panel" data-region="panel" aria-label="Détail du produit" hidden></aside>
+    </div>
+  </main>
+
+  <script type="module" src="/src/js/market/main.js"></script>
+</body>
+</html>
