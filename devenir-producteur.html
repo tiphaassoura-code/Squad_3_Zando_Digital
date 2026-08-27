@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Devenir producteur — ZANDO</title>
+    <link rel="icon" href="/logo-zando-symbole.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles/shared.css" />
+    <link rel="stylesheet" href="/src/styles/producteurs/add-product.css" />
+  </head>
+  <body data-page="producteurs">
+    <header class="header" data-region="header"></header>
+    <main class="page">
+      <section class="add-product" aria-labelledby="producer-form-title">
+        <a class="back-link" href="/producteurs.html"
+          >← Retour aux producteurs</a
+        >
+        <div class="add-product-heading">
+          <p class="eyebrow">Réseau MABOKO</p>
+          <h1 id="producer-form-title">Devenir producteur</h1>
+          <p>Présentez votre activité pour rejoindre notre réseau local.</p>
+        </div>
+        <form class="product-form" data-producer-form>
+          <div class="form-grid">
+            <label>Nom complet<input name="contact" required /></label>
+            <label
+              >Activité<input
+                name="role"
+                placeholder="Maraîcher, éleveur..."
+                required
+            /></label>
+            <label>Zone de production<input name="zone" required /></label>
+            <label>Localité<input name="city" required /></label>
+          </div>
+          <label
+            >Photo de profil<input
+              name="avatar"
+              type="file"
+              accept="image/*"
+              required
+          /></label>
+          <label
+            >Description de votre activité<textarea
+              name="bio"
+              rows="4"
+              required
+            ></textarea>
+          </label>
+          <p class="form-message" data-form-message aria-live="polite"></p>
+          <div class="form-actions">
+            <a class="btn btn-secondary" href="/producteurs.html">Annuler</a>
+            <button class="btn btn-primary" type="submit">
+              Rejoindre le réseau
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="/src/js/producteurs/register.js"></script>
+  </body>
+</html>
