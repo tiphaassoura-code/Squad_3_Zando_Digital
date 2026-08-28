@@ -32,13 +32,41 @@
             <label>Zone de production<input name="zone" required /></label>
             <label>Localité<input name="city" required /></label>
           </div>
-          <label
-            >Photo de profil<input
-              name="avatar"
-              type="file"
-              accept="image/*"
-              required
-          /></label>
+          <div class="image-upload-field">
+            <label for="producer-avatar">Photo de profil</label>
+            <div class="image-upload-box" data-image-upload>
+              <input
+                id="producer-avatar"
+                name="avatar"
+                type="file"
+                accept="image/*"
+                required
+                data-image-input
+              />
+              <div class="image-preview-card" data-image-preview hidden>
+                <img
+                  src=""
+                  alt="Aperçu du profil"
+                  class="image-preview-thumb is-avatar"
+                  data-preview-img
+                />
+                <div class="image-preview-meta">
+                  <span class="image-preview-name" data-preview-name></span>
+                  <button
+                    class="btn btn-secondary btn-sm"
+                    type="button"
+                    data-remove-image
+                  >
+                    Changer la photo
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="field-hint">
+              Assurez vous de choisir une image de bonne qualité. Une photo de face claire est
+              recommandée.
+            </p>
+          </div>
           <label
             >Description de votre activité<textarea
               name="bio"

@@ -6,17 +6,29 @@ import {
   getCart,
 } from "../shared/api.js";
 import { initPage } from "../shared/page.js";
+import { compressImage, setupImagePreview } from "../shared/image.js";
 
-// Le formulaire envoie une image compacte afin de rester compatible avec json-server.
+// Formulaire d'ajout de produit
 const form = document.querySelector("[data-product-form]");
 const params = new URLSearchParams(window.location.search);
 const [user, cart] = await Promise.allSettled([getUser(), getCart()]);
+
 await initPage("producteurs", {
   user: user.value ?? null,
   cartCount: () =>
     (cart.value ?? []).reduce((sum, item) => sum + item.quantity, 0),
 });
 
+// Initialiser l'aperçu dynamique de l'image sélectionnée
+setupImagePreview({
+  input: form.querySelector("[data-image-input]"),
+  previewContainer: form.querySelector("[data-image-preview]"),
+  previewImg: form.querySelector("[data-preview-img]"),
+  previewName: form.querySelector("[data-preview-name]"),
+  removeButton: form.querySelector("[data-remove-image]"),
+});
+
+// Chargement des catégories et du producteur associé
 try {
   const [categories, producers] = await Promise.all([
     getCategories(),
@@ -38,29 +50,61 @@ try {
     "Impossible de préparer le formulaire.";
 }
 
+// Soumission du formulaire avec compression d'image et publication API
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const message = document.querySelector("[data-form-message]");
   const submit = form.querySelector("button[type=submit]");
   submit.disabled = true;
-  message.textContent = "Publication en cours…";
-  const values = Object.fromEntries(new FormData(form));
+  message.textContent = "Optimisation et publication en cours…";
+
+  const formData = new FormData(form);
+  const rawValues = Object.fromEntries(formData);
+  const { image: imageFile, ...values } = rawValues;
+
   try {
-    const image = await fileToDataUrl(values.image);
+    const [image, thumb] = await Promise.all([
+      compressImage(imageFile, {
+        maxWidth: 600,
+        maxHeight: 600,
+        quality: 0.72,
+        maxBytes: 28000,
+      }),
+      compressImage(imageFile, {
+        maxWidth: 300,
+        maxHeight: 300,
+        quality: 0.65,
+        maxBytes: 10000,
+      }),
+    ]);
+
     if (!image) {
       submit.disabled = false;
-      message.textContent = "Ajoutez une photo du produit avant de publier.";
+      message.textContent =
+        "Ajoutez une photo valide du produit avant de publier.";
       return;
     }
+
+    const priceNum = Number(values.price);
+    const stockNum = Number(values.stock);
+    const currentTime = new Date().toLocaleTimeString("fr-FR", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
     await createProduct({
       ...values,
-      price: Number(values.price),
-      stock: Number(values.stock),
+      price: priceNum,
+      priceYesterday: priceNum,
+      stock: stockNum,
       producerId: form.dataset.producerId,
       image,
-      thumb: image,
-      images: [{ full: image, thumb: image }],
+      thumb: thumb || image,
+      images: [{ full: image, thumb: thumb || image }],
       dailyPrice: true,
+      priceUpdatedAt: currentTime,
+      variety: values.variety || "Standard",
+      conservation: values.conservation || "Frais (3 à 5 jours)",
       minOrder: 1,
       harvestedAt: "aujourd'hui",
       rating: 0,
@@ -68,50 +112,15 @@ form.addEventListener("submit", async (event) => {
       ordersCount: 0,
       createdAt: new Date().toISOString().slice(0, 10),
     });
-    window.location.assign(`/producteurs.html?id=${form.dataset.producerId}`);
-  } catch {
+
+    message.textContent = "Produit publié avec succès ! Redirection…";
+    setTimeout(() => {
+      window.location.assign(`/producteurs.html?id=${form.dataset.producerId}`);
+    }, 400);
+  } catch (error) {
+    console.error("Erreur lors de l'ajout du produit :", error);
     submit.disabled = false;
-    message.textContent = "La publication a échoué. Réessayez.";
+    message.textContent =
+      "La publication a échoué. Assurez-vous que le serveur API est bien lancé (`npm run api`).";
   }
 });
-
-function fileToDataUrl(file) {
-  return compressImage(file);
-}
-
-function compressImage(file) {
-  if (
-    !(file instanceof File) ||
-    !file.size ||
-    !file.type.startsWith("image/")
-  ) {
-    return Promise.resolve("");
-  }
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      const image = new Image();
-      image.addEventListener("load", () => {
-        const scale = Math.min(
-          1,
-          1200 / Math.max(image.naturalWidth, image.naturalHeight),
-        );
-        const canvas = document.createElement("canvas");
-        canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
-        canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
-        canvas
-          .getContext("2d")
-          .drawImage(image, 0, 0, canvas.width, canvas.height);
-        resolve(canvas.toDataURL("image/jpeg", 0.82));
-      });
-      image.addEventListener("error", () =>
-        reject(new Error("Image illisible")),
-      );
-      image.src = reader.result;
-    });
-    reader.addEventListener("error", () =>
-      reject(new Error("Lecture impossible")),
-    );
-    reader.readAsDataURL(file);
-  });
-}
