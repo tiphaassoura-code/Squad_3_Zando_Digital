@@ -1,0 +1,22 @@
+{
+  "name": "zando",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ZANDO — Du champ au marché, sans intermédiaire. Marketplace agricole producteurs–commerçants.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c green,cyan \"npm:api\" \"npm:web\"",
+    "api": "json-server db.json --port 3001",
+    "web": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide": "^1.33.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "json-server": "^1.0.0-beta.15",
+    "vite": "^8.2.2"
+  }
+}

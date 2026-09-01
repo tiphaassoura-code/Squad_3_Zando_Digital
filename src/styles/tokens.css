@@ -1,0 +1,93 @@
+/* ZANDO — Design Tokens v1.0
+   Référence : le document « MABOKO — Design System & Variables CSS » fourni au départ
+   Ne pas introduire de valeur arbitraire : tout passe par ces variables. */
+
+:root {
+  /* Couleurs */
+  --color-primary: #176B3A;
+  --color-primary-dark: #0F4D2A;
+  --color-primary-light: #EAF5EC;
+  --color-surface-light: #F4F9F4;
+  --color-background: #F8FAF8;
+  --color-surface: #FFFFFF;
+  --color-border: #E3E8E4;
+  --color-text: #202522;
+  --color-text-secondary: #68716B;
+  --color-accent: #D9903D;
+  --color-warning: #F4C95D;
+  --color-error: #C94C4C;
+
+  --color-success-bg: #EAF5EC;
+  --color-success-text: #176B3A;
+  --color-pending-bg: #FFF4DD;
+  --color-pending-text: #A66A18;
+  --color-error-bg: #FBEAEA;
+
+  /* Typographie */
+  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 40px;
+
+  /* Espacements */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Rayons */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Ombres */
+  --shadow-sm: 0 1px 3px rgba(32, 37, 34, .06);
+  --shadow-md: 0 6px 20px rgba(32, 37, 34, .08);
+  --shadow-lg: 0 12px 32px rgba(32, 37, 34, .10);
+
+  /* Structure */
+  --container-max: 1600px;
+  --header-height: 80px;
+  --sidebar-width: 250px;
+  --content-gap: 24px;
+
+  /* Mouvement — ajouté pour garder les durées cohérentes entre composants */
+  --ease-out: cubic-bezier(.22, .61, .36, 1);
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --duration-slow: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 1ms;
+    --duration-base: 1ms;
+    --duration-slow: 1ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

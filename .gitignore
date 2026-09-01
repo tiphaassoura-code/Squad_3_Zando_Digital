@@ -1,0 +1,23 @@
+# Dépendances (se réinstallent avec npm install)
+node_modules/
+
+# Secrets — ne JAMAIS envoyer sur GitHub
+.env
+.env.local
+.env.*.local
+
+# Fichiers de build
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.vscode/
+.idea/
