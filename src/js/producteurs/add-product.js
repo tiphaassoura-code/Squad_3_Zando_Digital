@@ -120,7 +120,6 @@ form.addEventListener("submit", async (event) => {
   } catch (error) {
     console.error("Erreur lors de l'ajout du produit :", error);
     submit.disabled = false;
-    message.textContent =
-      "La publication a échoué. Assurez-vous que le serveur API est bien lancé (`npm run api`).";
+    message.textContent = "La publication a échoué. Veuillez ressayer.";
   }
 });
