@@ -270,7 +270,17 @@ a {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 0 0 14px 14px;
-    background: #eef4ee;
+    background-image: linear-gradient(
+        90deg,
+    rgba(238, 245, 239, 0.98) 0%,
+    rgba(238, 245, 239, 0.92) 20%,
+    rgba(238, 245, 239, 0.65) 38%,
+    rgba(238, 245, 239, 0.25) 55%,
+    rgba(238, 245, 239, 0) 72%
+    ), url(../../images/header-img.png);
+    background-size: cover;
+    background-position: start;
+    background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -283,12 +293,6 @@ a {
     position: relative;
     z-index: 2;
     padding: 30px 30px 26px;
-    background: linear-gradient(
-        90deg,
-        #eef5ef 0%,
-        #eef5ef 70%,
-        rgba(238, 245, 239, 0.78) 100%
-    );
 }
 
 .eyebrow {
