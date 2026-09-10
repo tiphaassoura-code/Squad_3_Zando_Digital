@@ -12,14 +12,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/shared.css">
+
+  <link rel="stylesheet" href="/src/styles/contact/index.css">
 </head>
 <body data-page="contact">
   <header class="header" data-region="header"></header>
 
-  <main class="page">
-    <!-- Contenu de la page Contact à construire ici. -->
-  </main>
+  <main class="page" id="contact">
+    <div data-region="breadcrumb"></div>
 
-  <script type="module" src="/src/js/shared/bootstrap.js"></script>
+    <div class="ctop">
+      <div data-region="hero"></div>
+      <div data-region="form"></div>
+      <div data-region="coordonnees"></div>
+    </div>
+
+    <div class="cbottom">
+      <div data-region="faq"></div>
+      <div data-region="map"></div>
+    </div>
+  </main> 
+
+  <script type="module" src="/src/js/contact/main.js"></script>
 </body>
 </html>
