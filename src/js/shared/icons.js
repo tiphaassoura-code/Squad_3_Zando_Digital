@@ -17,6 +17,8 @@ import {
   CircleHelp,
   ClipboardList,
   ChevronRight,
+  CreditCard,
+  Eye,
   Flame,
   Handshake,
   Heart,
@@ -24,6 +26,7 @@ import {
   LayoutGrid,
   Leaf,
   List,
+  LogOut,
   MapPin,
   Minus,
   Package,
@@ -38,6 +41,7 @@ import {
   Trash2,
   Star,
   Truck,
+  Users,
   Wheat,
   X
 } from 'lucide'
@@ -55,6 +59,8 @@ const ICONS = {
   'circle-help': CircleHelp,
   'clipboard-list': ClipboardList,
   'chevron-right': ChevronRight,
+  'credit-card': CreditCard,
+  eye: Eye,
   flame: Flame,
   handshake: Handshake,
   heart: Heart,
@@ -62,6 +68,7 @@ const ICONS = {
   'layout-grid': LayoutGrid,
   leaf: Leaf,
   list: List,
+  'log-out': LogOut,
   'map-pin': MapPin,
   minus: Minus,
   package: Package,
@@ -76,6 +83,7 @@ const ICONS = {
   trash: Trash2,
   star: Star,
   truck: Truck,
+  users: Users,
   wheat: Wheat,
   x: X
 }
