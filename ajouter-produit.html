@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ajouter un produit — ZANDO</title>
+    <link rel="icon" href="/logo-zando-symbole.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles/shared.css" />
+    <link rel="stylesheet" href="/src/styles/producteurs/add-product.css" />
+  </head>
+  <body data-page="producteurs">
+    <header class="header" data-region="header"></header>
+    <main class="page">
+      <section class="add-product" aria-labelledby="add-product-title">
+        <a class="back-link" href="/producteurs.html"
+          >← Retour aux producteurs</a
+        >
+        <div class="add-product-heading">
+          <p class="eyebrow">Espace producteur</p>
+          <h1 id="add-product-title">Ajouter un nouveau produit</h1>
+          <p>Publiez votre récolte pour la rendre disponible aux acheteurs.</p>
+        </div>
+        <form class="product-form" data-product-form>
+          <div class="form-grid">
+            <label>Nom du produit<input name="name" required /></label
+            ><label
+              >Catégorie<select
+                name="categoryId"
+                required
+                data-categories
+              ></select></label
+            ><label
+              >Prix du jour (FCFA)<input
+                name="price"
+                type="number"
+                min="1"
+                required /></label
+            ><label
+              >Unité<select name="unit">
+                <option value="panier">Panier</option>
+                <option value="tas">Tas</option>
+                <option value="botte">Botte</option>
+                <option value="kg">Kg</option>
+              </select></label
+            ><label
+              >Quantité disponible<input
+                name="stock"
+                type="number"
+                min="0"
+                required /></label
+            ><label
+              >Unité de stock<input
+                name="stockUnit"
+                required
+                value="paniers" /></label
+            ><label>Zone de production<input name="zone" required /></label
+            ><label>Localité<input name="city" required /></label>
+          </div>
+          <div class="image-upload-field">
+            <label for="product-image">Photo du produit</label>
+            <div class="image-upload-box" data-image-upload>
+              <input
+                id="product-image"
+                name="image"
+                type="file"
+                accept="image/*"
+                required
+                data-image-input
+              />
+              <div class="image-preview-card" data-image-preview hidden>
+                <img
+                  src=""
+                  alt="Aperçu du produit"
+                  class="image-preview-thumb"
+                  data-preview-img
+                />
+                <div class="image-preview-meta">
+                  <span class="image-preview-name" data-preview-name></span>
+                  <button
+                    class="btn btn-secondary btn-sm"
+                    type="button"
+                    data-remove-image
+                  >
+                    Changer l'image
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="field-hint">
+              Assurez vous que l'image de votre produit est de bonne qualité.
+            </p>
+          </div>
+          <label
+            >Description<textarea
+              name="description"
+              rows="4"
+              required
+            ></textarea>
+          </label>
+          <p class="form-message" data-form-message aria-live="polite"></p>
+          <div class="form-actions">
+            <a class="btn btn-secondary" data-cancel>Annuler</a
+            ><button class="btn btn-primary" type="submit">
+              Publier le produit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="/src/js/producteurs/add-product.js"></script>
+  </body>
+</html>

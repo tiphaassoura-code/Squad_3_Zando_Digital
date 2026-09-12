@@ -1,0 +1,180 @@
+@import "../shared.css";
+.add-product {
+  max-width: 900px;
+  margin: var(--space-8) auto var(--space-12);
+  padding: 0 var(--space-5);
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+.add-product-heading {
+  margin: var(--space-6) 0;
+  padding: 0 var(--space-3);
+  text-align: center;
+}
+.add-product-heading h1 {
+  margin: var(--space-2) 0;
+  font-size: var(--text-3xl);
+}
+.add-product-heading p:last-child {
+  color: var(--color-text-secondary);
+}
+.product-form {
+  display: grid;
+  gap: var(--space-7);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+.product-form label {
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+.product-form input,
+.product-form select,
+.product-form textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: var(--font-weight-regular);
+}
+.product-form input[type="file"] {
+  min-height: 46px;
+  padding: 5px;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  cursor: pointer;
+}
+.product-form input[type="file"].has-file {
+  display: none;
+}
+.product-form input[type="file"]::file-selector-button {
+  min-height: 34px;
+  margin-right: var(--space-3);
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+.product-form input[type="file"]::file-selector-button:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+.image-upload-field {
+  display: grid;
+  gap: var(--space-2);
+}
+.image-upload-field > label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+}
+.image-preview-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-light);
+}
+.image-preview-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  flex-shrink: 0;
+}
+.image-preview-thumb.is-avatar {
+  border-radius: var(--radius-full);
+}
+.image-preview-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+.image-preview-name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  word-break: break-all;
+}
+.field-hint {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+.product-form textarea {
+  resize: vertical;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-5);
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+.form-message {
+  min-height: 20px;
+  color: var(--color-primary-dark);
+  font-size: var(--text-sm);
+}
+.product-form > label {
+  gap: var(--space-3);
+}
+.product-form textarea {
+  padding: 14px;
+}
+.product-form input:focus,
+.product-form select:focus,
+.product-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: 3px solid rgba(23, 107, 58, 0.12);
+}
+.form-actions {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+.form-actions .btn {
+  min-width: 160px;
+}
+@media (max-width: 560px) {
+  .product-form {
+    padding: var(--space-5);
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  .form-actions .btn {
+    width: 100%;
+  }
+}

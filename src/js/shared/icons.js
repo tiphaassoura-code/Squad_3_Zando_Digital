@@ -38,6 +38,7 @@ import {
   Trash2,
   Star,
   Truck,
+  Users,
   Wheat,
   X
 } from 'lucide'
@@ -71,11 +72,13 @@ const ICONS = {
   search: Search,
   'shopping-cart': ShoppingCart,
   sliders: SlidersHorizontal,
+  'sliders-horizontal': SlidersHorizontal,
   sprout: Sprout,
   store: Store,
   trash: Trash2,
   star: Star,
   truck: Truck,
+  users: Users,
   wheat: Wheat,
   x: X
 }
