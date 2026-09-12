@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Commandes — ZANDO</title>
+  <title>Commandes</title>
   <meta name="description" content="Historique, statuts et suivi de vos commandes groupées.">
 
   <link rel="icon" href="/logo-zando-symbole.svg" type="image/svg+xml">
@@ -11,15 +11,370 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/shared.css">
-</head>
+  <link rel="stylesheet" href="/src/styles/commandes/index.css">
+</head> 
 <body data-page="commandes">
   <header class="header" data-region="header"></header>
 
-  <main class="page">
-    <!-- Contenu de la page Commandes à construire ici. -->
-  </main>
+  <div class="page">
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="sidebar__card">
+      <div class="sidebar__profile">
+        <img id="sbAvatar" src="https://images.unsplash.com/photo-1723922967349-d54aabf4084d?auto=format&fit=crop&w=120&q=80" alt="Grâce Bakala" class="sidebar__avatar">
+        <div>
+          <strong id="sbName">Grâce</strong>
+          <span id="sbRole">Acheteuse</span>
+        </div>
+      </div>
+      <p class="sidebar__since">Membre depuis <span id="sbSince">Mai 2024</span></p>
 
+      <nav class="sidebar__nav" aria-label="Compte">
+        <a href="dashboard.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1" /><rect width="7" height="5" x="14" y="3" rx="1" /><rect width="7" height="9" x="14" y="12" rx="1" /><rect width="7" height="5" x="3" y="16" rx="1" /></svg>
+          Tableau de bord
+        </a>
+        <a href="commande.html" class="is-active" aria-current="page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17V7" /><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8" /><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" /></svg>
+          Mes commandes
+        </a>
+        <a href="adresses.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+          Adresses
+        </a>
+        <a href="paiements.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg>
+          Paiements
+        </a>
+        <a href="favoris.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
+          Favoris
+        </a>
+        <a href="producteurs-suivis.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path d="M16 3.128a4 4 0 0 1 0 7.744" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><circle cx="9" cy="7" r="4" /></svg>
+          Producteurs suivis
+        </a>
+        <a href="parametres.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /><circle cx="12" cy="12" r="3" /></svg>
+          Paramètres
+        </a>
+        <button type="button" id="logoutBtn" class="sidebar__logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 17 5-5-5-5" /><path d="M21 12H9" /><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /></svg>
+          Déconnexion
+        </button>
+      </nav>
+    </div>
+
+    <div class="sidebar__help">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></svg>
+      <strong>Besoin d'aide ?</strong>
+      <p>Contactez-nous au<br><a id="supportPhone" href="tel:+242061234567">+242 06 123 45 67</a></p>
+      <span id="supportHours" class="sidebar__hours">Lun – Sam : 8 h – 18 h</span>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main" class="content">
+    <div class="content__head">
+      <div>
+        <h1>Mes commandes</h1>
+        <p>Suivez l'état de toutes vos commandes</p>
+      </div>
+    </div>
+
+    <div class="content__body">
+      <!-- ORDERS COLUMN -->
+      <section class="orders-col" aria-label="Liste des commandes">
+
+        <div class="tabs" id="statusTabs" role="tablist" aria-label="Filtrer par statut">
+          <button class="tab is-active" role="tab" aria-selected="true" data-status="toutes">Toutes</button>
+          <button class="tab" role="tab" aria-selected="false" data-status="en_attente">En attente</button>
+          <button class="tab" role="tab" aria-selected="false" data-status="confirmee">Confirmées</button>
+          <button class="tab" role="tab" aria-selected="false" data-status="en_cours">En cours</button>
+          <button class="tab" role="tab" aria-selected="false" data-status="livree">Livrées</button>
+          <button class="tab" role="tab" aria-selected="false" data-status="annulee">Annulées</button>
+        </div>
+
+
+      <div id="ordersList" class="orders-list" aria-live="polite">
+        <article class="order-card" data-id="CMD-2024-0448">
+          <div class="order-card__head">
+            <div class="order-card__title">
+              <h3>Commande #CMD-2024-0448</h3>
+              <span class="order-card__date">16 Mai 2024 à 09:32</span>
+            </div>
+            <div class="order-card__head-right">
+              <span class="badge badge--en_cours">En cours</span>
+              <button type="button" class="chevron-btn is-open" data-toggle="CMD-2024-0448" aria-label="Afficher/masquer le détail" aria-expanded="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="order-card__collapsible" data-body="CMD-2024-0448">
+            <div class="order-card__body">
+              <div class="items-grid">
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=400&q=80" alt="Tomates fraîches" loading="lazy">
+                  <div class="item__info">
+                    <strong>Tomates fraîches</strong>
+                    <span class="item__producer">Jean Moukoko</span>
+                    <span class="item__price">1 500 FCFA <span>/ panier</span></span>
+                    <span class="item__qty">Quantité : 10 paniers</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=400&q=80" alt="Carottes" loading="lazy">
+                  <div class="item__info">
+                    <strong>Carottes</strong>
+                    <span class="item__producer">Jean Moukoko</span>
+                    <span class="item__price">1 200 FCFA <span>/ tas</span></span>
+                    <span class="item__qty">Quantité : 5 tas</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1739159192920-7124e3babcaf?auto=format&fit=crop&w=400&q=80" alt="Poivrons verts" loading="lazy">
+                  <div class="item__info">
+                    <strong>Poivrons verts</strong>
+                    <span class="item__producer">Ferme de Mindouli</span>
+                    <span class="item__price">1 800 FCFA <span>/ panier</span></span>
+                    <span class="item__qty">Quantité : 10 paniers</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-card__totals">
+                <div class="totals-row"><span>Sous-total</span><span>35 000 FCFA</span></div>
+                <div class="totals-row"><span>Livraison</span><span>2 500 FCFA</span></div>
+                <div class="totals-row total"><span>Total</span><b>37 500 FCFA</b></div>
+                <button type="button" class="order-card__link" data-detail="CMD-2024-0448">
+                  Voir le détail <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></svg>
+                </button>
+              </div>
+            </div>
+            <div class="timeline">
+          <div class="timeline__step done">
+            <span class="timeline__dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span>
+            <span class="timeline__label">Commande passée</span>
+            <span class="timeline__date">16 Mai 09:32</span>
+          </div>
+          <div class="timeline__step done">
+            <span class="timeline__dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span>
+            <span class="timeline__label">Confirmée</span>
+            <span class="timeline__date">16 Mai 10:15</span>
+          </div>
+          <div class="timeline__step done">
+            <span class="timeline__dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span>
+            <span class="timeline__label">En préparation</span>
+            <span class="timeline__date">16 Mai 14:30</span>
+          </div>
+          <div class="timeline__step current">
+            <span class="timeline__dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg></span>
+            <span class="timeline__label">En livraison</span>
+            <span class="timeline__date">En cours</span>
+          </div>
+          <div class="timeline__step pending">
+            <span class="timeline__dot"><span class="timeline__bullet"></span></span>
+            <span class="timeline__label">Livrée</span>
+            <span class="timeline__date"></span>
+          </div></div>
+          </div>
+        </article>
+        <article class="order-card" data-id="CMD-2024-0421">
+          <div class="order-card__head">
+            <div class="order-card__title">
+              <h3>Commande #CMD-2024-0421</h3>
+              <span class="order-card__date">10 Mai 2024 à 11:05</span>
+            </div>
+            <div class="order-card__head-right">
+              <span class="badge badge--livree">Livrée</span>
+              <button type="button" class="chevron-btn is-open" data-toggle="CMD-2024-0421" aria-label="Afficher/masquer le détail" aria-expanded="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="order-card__collapsible" data-body="CMD-2024-0421">
+            <div class="order-card__body">
+              <div class="items-grid">
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=400&q=80" alt="Oignons rouges" loading="lazy">
+                  <div class="item__info">
+                    <strong>Oignons rouges</strong>
+                    <span class="item__producer">Coopérative Kinkala</span>
+                    <span class="item__price">1 000 FCFA <span>/ tas</span></span>
+                    <span class="item__qty">Quantité : 8 tas</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1550411294-875307bccdd5?auto=format&fit=crop&w=400&q=80" alt="Légumes feuilles" loading="lazy">
+                  <div class="item__info">
+                    <strong>Légumes feuilles</strong>
+                    <span class="item__producer">Ferme de Mindouli</span>
+                    <span class="item__price">800 FCFA <span>/ botte</span></span>
+                    <span class="item__qty">Quantité : 12 bottes</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1784039484509-bedb3e576928?auto=format&fit=crop&w=400&q=80" alt="Aubergines" loading="lazy">
+                  <div class="item__info">
+                    <strong>Aubergines</strong>
+                    <span class="item__producer">Ferme de Madingou</span>
+                    <span class="item__price">1 200 FCFA <span>/ panier</span></span>
+                    <span class="item__qty">Quantité : 5 paniers</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-card__totals">
+                <div class="totals-row"><span>Sous-total</span><span>18 800 FCFA</span></div>
+                <div class="totals-row"><span>Livraison</span><span>2 000 FCFA</span></div>
+                <div class="totals-row total"><span>Total</span><b>20 800 FCFA</b></div>
+                <button type="button" class="order-card__link" data-detail="CMD-2024-0421">
+                  Voir le détail <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="order-card" data-id="CMD-2024-0389">
+          <div class="order-card__head">
+            <div class="order-card__title">
+              <h3>Commande #CMD-2024-0389</h3>
+              <span class="order-card__date">02 Mai 2024 à 08:45</span>
+            </div>
+            <div class="order-card__head-right">
+              <span class="badge badge--confirmee">Confirmée</span>
+              <button type="button" class="chevron-btn is-open" data-toggle="CMD-2024-0389" aria-label="Afficher/masquer le détail" aria-expanded="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="order-card__collapsible" data-body="CMD-2024-0389">
+            <div class="order-card__body">
+              <div class="items-grid">
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1546860255-95536c19724e?auto=format&fit=crop&w=400&q=80" alt="Piments frais" loading="lazy">
+                  <div class="item__info">
+                    <strong>Piments frais</strong>
+                    <span class="item__producer">Jean Moukoko</span>
+                    <span class="item__price">2 000 FCFA <span>/ tas</span></span>
+                    <span class="item__qty">Quantité : 5 tas</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="https://images.unsplash.com/photo-1611105637889-3afd7295bdbf?auto=format&fit=crop&w=400&q=80" alt="Choux pommés" loading="lazy">
+                  <div class="item__info">
+                    <strong>Choux pommés</strong>
+                    <span class="item__producer">Ferme de Mindouli</span>
+                    <span class="item__price">800 FCFA <span>/ pièce</span></span>
+                    <span class="item__qty">Quantité : 10 pièces</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-card__totals">
+                <div class="totals-row"><span>Sous-total</span><span>13 000 FCFA</span></div>
+                <div class="totals-row"><span>Livraison</span><span>2 000 FCFA</span></div>
+                <div class="totals-row total"><span>Total</span><b>15 000 FCFA</b></div>
+                <button type="button" class="order-card__link" data-detail="CMD-2024-0389">
+                  Voir le détail <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+        <div id="emptyState" class="empty-state" hidden>
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12" /><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /></svg>
+          <h3 id="emptyTitle">Aucune commande</h3>
+          <p id="emptyText">Vous n'avez aucune commande dans cette catégorie pour l'instant.</p>
+          <a href="marche.html" class="btn btn--primary">Voir le marché</a>
+        </div>
+
+        <nav class="pagination" id="pagination" aria-label="Pagination des commandes">
+          <button data-page="prev" aria-label="Page précédente"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+          <button class="is-active" data-page="1" aria-current="page">1</button>
+          <button data-page="2">2</button>
+          <button data-page="3">3</button>
+          <span class="pagination__ellipsis">…</span>
+          <button data-page="8">8</button>
+          <button data-page="next" aria-label="Page suivante"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+        </nav>
+      </section>
+
+      <!-- SIDE COLUMN -->
+      <aside class="side-col">
+        <div class="summary-card">
+          <h2>Résumé</h2>
+          <dl class="summary-list">
+            <div><dt>Commandes passées</dt><dd id="statTotal">18</dd></div>
+            <div><dt>En cours</dt><dd id="statEnCours">3</dd></div>
+            <div><dt>Livrées</dt><dd id="statLivrees">15</dd></div>
+            <div><dt>Total dépensé</dt><dd id="statDepense">265 800 FCFA</dd></div>
+          </dl>
+          <a href="marche.html" class="btn btn--primary btn--block">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0" /><path d="M3.103 6.034h17.794" /><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" /></svg>
+            Continuer mes achats
+          </a>
+        </div>
+
+        <div class="why-card">
+          <h2>Pourquoi commander sur Zando ?</h2>
+          <ul id="benefitsList" class="why-list">
+            <li>
+              <span class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" /><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" /><path d="M5 21h14" /></svg></span>
+              <span><strong>Produits frais</strong><span>du jour</span></span>
+            </li>
+            <li>
+              <span class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /><path d="m21 3 1 11h-2" /><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /><path d="M3 4h8" /></svg></span>
+              <span><strong>Prix justes</strong><span>sans intermédiaires</span></span>
+            </li>
+            <li>
+              <span class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><polyline points="3.29 7 12 12 20.71 7" /><path d="m7.5 4.27 9 5.15" /></svg></span>
+              <span><strong>Achat en gros</strong><span>commandes groupées</span></span>
+            </li>
+            <li>
+              <span class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg></span>
+              <span><strong>Livraison rapide</strong><span>sur vos marchés</span></span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<!-- ===== ORDER DETAIL MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal__close" id="modalClose" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+    </button>
+    <div id="modalBody" class="modal__body"><!-- injecté en JS --></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER PARTAGÉ ===== -->
+<div id="footer"></div>
+
+<!-- ===== TOASTS ===== -->
+<div id="toastContainer" class="toast-container" aria-live="assertive"></div>
+
+<!-- ===== CONFIRM DIALOG ===== -->
+<div class="confirm-overlay" id="confirmOverlay" hidden>
+  <div class="confirm-box" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <h3 id="confirmTitle">Annuler cette commande ?</h3>
+    <p id="confirmText">Cette action est définitive. Le producteur sera informé de l'annulation.</p>
+    <div class="confirm-box__actions">
+      <button type="button" class="btn btn--ghost" id="confirmCancel">Retour</button>
+      <button type="button" class="btn btn--danger" id="confirmOk">Oui, annuler</button>
+    </div>
+  </div>
+</div>
+
+<!-- <script src="shared/components/header.js"></script> -->
+<!-- <script src="shared/components/footer.js"></script> -->
+  <script type="module" src="src/js/commandes/main.js"></script>
   <script type="module" src="/src/js/shared/bootstrap.js"></script>
 </body>
 </html>
