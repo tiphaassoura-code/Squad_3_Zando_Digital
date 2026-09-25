@@ -632,17 +632,17 @@ import * as api from "../shared/api.js"
 
     els.modalBody.innerHTML = `
       <h2 id="modalTitle">Commande #${order.id}</h2>
-      <p style="color:var(--ink-500);font-size:.85rem;margin:.3rem 0 1.2rem">${formatDate(order.createdAt)} · <span class="badge ${meta.badge}">${meta.label}</span></p>
+      <p style="color:var(--ink-500);font-size:var(--text-sm);margin:.3rem 0 1.2rem">${formatDate(order.createdAt)} · <span class="badge ${meta.badge}">${meta.label}</span></p>
 
       ${
         hasItems
           ? `<div class="items-grid" style="margin-bottom:1.2rem">${order.items.map(itemTemplate).join("")}</div>`
-          : `<p style="font-size:.85rem;color:var(--ink-500);margin-bottom:1.2rem">Le détail des produits n'a pas été enregistré pour cette commande.</p>`
+          : `<p style="font-size:var(--text-sm);color:var(--ink-500);margin-bottom:1.2rem">Le détail des produits n'a pas été enregistré pour cette commande.</p>`
       }
 
       ${status === "annulee" ? `<p class="order-card__cancel-note">Annulée${order.cancelReason ? " — " + escapeHTML(order.cancelReason) : ""}</p>` : hasTimeline ? timelineTemplate(order.timeline) : ""}
 
-      <div style="margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--border);font-size:.86rem;color:var(--ink-700);display:grid;gap:.5rem">
+      <div style="margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--border);font-size:var(--text-sm);color:var(--ink-700);display:grid;gap:.5rem">
         <div><strong>Marché :</strong> ${escapeHTML(order.market || "—")}</div>
       </div>
 
