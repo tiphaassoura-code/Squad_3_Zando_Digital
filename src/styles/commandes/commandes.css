@@ -62,9 +62,6 @@ svg{display:block}
 }
 
 /* =========================== SIDEBAR =========================== */
-/* min-width:0 : sans ça, un item de grille garde par défaut la largeur
-   minimale de son contenu (ici la rangée d'onglets, qui ne doit scroller
-   que sur elle-même) et pousse toute la page en débordement horizontal. */
 .sidebar{display:flex; flex-direction:column; gap:1.25rem; position:sticky; top:90px; min-width:0}
 .sidebar__card{
   background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg);
@@ -109,7 +106,7 @@ svg{display:block}
 
 /* =========================== TABS =========================== */
 .tabs{
-  display:flex; gap:.4rem; overflow-x:auto; padding-bottom:.2rem;
+  display:flex; gap:.4rem; overflow-x:auto; padding:.3rem 0 .2rem;
   border-bottom:1px solid var(--border); margin-bottom:1.1rem;
   touch-action: pan-x; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
 }
