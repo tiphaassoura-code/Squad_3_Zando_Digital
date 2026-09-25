@@ -1381,13 +1381,7 @@
     "memberSince": "2024-05-01",
     "avatar": "https://images.unsplash.com/photo-1723922967349-d54aabf4084d?auto=format&fit=crop&w=120&q=80"
   },
-  "cart": [
-    {
-      "productId": "9",
-      "quantity": 1,
-      "id": "Au4YcyYY3jg"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "CMD-2026-0561",
