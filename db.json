@@ -1103,27 +1103,631 @@
     "fullName": "Grâce Bakala",
     "role": "Acheteuse",
     "market": "Marché Total",
+    "memberSince": "2024-05-01",
     "avatar": "https://images.unsplash.com/photo-1723922967349-d54aabf4084d?auto=format&fit=crop&w=120&q=80"
   },
   "cart": [],
   "orders": [
     {
-      "id": "CMD-2041",
+      "id": "CMD-2026-0561",
       "userId": "u1",
-      "status": "livree",
-      "total": 34500,
-      "itemCount": 5,
-      "createdAt": "2026-08-14",
-      "market": "Marché Total"
+      "status": "en_cours",
+      "createdAt": "2026-09-20T09:10:00",
+      "market": "Marché Total",
+      "items": [
+        {
+          "productId": "1",
+          "image": "https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=400&q=80",
+          "name": "Tomates fraîches",
+          "producerName": "Ferme Moukoko",
+          "price": 1500,
+          "unit": "panier",
+          "quantity": 8
+        },
+        {
+          "productId": "6",
+          "image": "https://images.unsplash.com/photo-1784039484509-bedb3e576928?auto=format&fit=crop&w=400&q=80",
+          "name": "Aubergines",
+          "producerName": "Ferme Nsona",
+          "price": 1200,
+          "unit": "panier",
+          "quantity": 4
+        }
+      ],
+      "subtotal": 16800,
+      "deliveryFee": 2000,
+      "total": 18800,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "20 sept. 09:10"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "20 sept. 10:05"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "done",
+          "date": "20 sept. 15:30"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "current",
+          "date": "En cours"
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "pending",
+          "date": ""
+        }
+      ]
     },
     {
-      "id": "CMD-2058",
+      "id": "CMD-2026-0555",
       "userId": "u1",
-      "status": "en_route",
-      "total": 21800,
-      "itemCount": 3,
-      "createdAt": "2026-08-19",
-      "market": "Marché Poto-Poto"
+      "status": "en_attente",
+      "createdAt": "2026-09-18T08:20:00",
+      "market": "Marché Poto-Poto",
+      "items": [
+        {
+          "productId": "13",
+          "image": "https://images.unsplash.com/photo-1549978113-29eb25c8177f?auto=format&fit=crop&w=400&q=80",
+          "name": "Arachides décortiquées",
+          "producerName": "Les Jardins de Mindouli",
+          "price": 1600,
+          "unit": "kg",
+          "quantity": 2
+        }
+      ],
+      "subtotal": 3200,
+      "deliveryFee": 2000,
+      "total": 5200,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "18 sept. 08:20"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "current",
+          "date": "En cours"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "pending",
+          "date": ""
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "pending",
+          "date": ""
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "pending",
+          "date": ""
+        }
+      ]
+    },
+    {
+      "id": "CMD-2026-0548",
+      "userId": "u1",
+      "status": "confirmee",
+      "createdAt": "2026-09-15T14:05:00",
+      "market": "Marché Total",
+      "items": [
+        {
+          "productId": "9",
+          "image": "https://images.unsplash.com/photo-1550411294-875307bccdd5?auto=format&fit=crop&w=400&q=80",
+          "name": "Feuilles de manioc",
+          "producerName": "Ferme Moukoko",
+          "price": 500,
+          "unit": "botte",
+          "quantity": 6
+        },
+        {
+          "productId": "18",
+          "image": "https://images.unsplash.com/photo-1683536905403-ea18a3176d29?auto=format&fit=crop&w=400&q=80",
+          "name": "Amarante",
+          "producerName": "Coopérative Kinkala",
+          "price": 600,
+          "unit": "botte",
+          "quantity": 4
+        }
+      ],
+      "subtotal": 5400,
+      "deliveryFee": 2000,
+      "total": 7400,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "15 sept. 14:05"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "15 sept. 16:40"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "current",
+          "date": "En cours"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "pending",
+          "date": ""
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "pending",
+          "date": ""
+        }
+      ]
+    },
+    {
+      "id": "CMD-2026-0530",
+      "userId": "u1",
+      "status": "livree",
+      "createdAt": "2026-09-10T09:50:00",
+      "market": "Marché Poto-Poto",
+      "items": [
+        {
+          "productId": "17",
+          "image": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=400&q=80",
+          "name": "Mangues",
+          "producerName": "Les Jardins de Mindouli",
+          "price": 1000,
+          "unit": "panier",
+          "quantity": 6
+        },
+        {
+          "productId": "16",
+          "image": "https://images.unsplash.com/photo-1691657915865-d7b9a6a54e6f?auto=format&fit=crop&w=400&q=80",
+          "name": "Avocats",
+          "producerName": "Ferme Loudima",
+          "price": 1400,
+          "unit": "panier",
+          "quantity": 5
+        }
+      ],
+      "subtotal": 13000,
+      "deliveryFee": 2000,
+      "total": 15000,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "10 sept. 09:50"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "10 sept. 10:30"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "done",
+          "date": "10 sept. 13:00"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "done",
+          "date": "10 sept. 15:20"
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "done",
+          "date": "10 sept. 17:45"
+        }
+      ]
+    },
+    {
+      "id": "CMD-2026-0522",
+      "userId": "u1",
+      "status": "livree",
+      "createdAt": "2026-09-07T11:15:00",
+      "market": "Marché Total",
+      "items": [
+        {
+          "productId": "19",
+          "image": "https://images.unsplash.com/photo-1559631526-5716df3cfacd?auto=format&fit=crop&w=400&q=80",
+          "name": "Maïs frais",
+          "producerName": "Coopérative Mouyondzi",
+          "price": 1400,
+          "unit": "sac",
+          "quantity": 4
+        },
+        {
+          "productId": "10",
+          "image": "https://images.unsplash.com/photo-1558408525-1092038389ae?auto=format&fit=crop&w=400&q=80",
+          "name": "Gombos",
+          "producerName": "Ferme Loudima",
+          "price": 1300,
+          "unit": "panier",
+          "quantity": 6
+        }
+      ],
+      "subtotal": 13400,
+      "deliveryFee": 2000,
+      "total": 15400,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "7 sept. 11:15"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "7 sept. 12:00"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "done",
+          "date": "7 sept. 15:10"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "done",
+          "date": "7 sept. 17:00"
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "done",
+          "date": "7 sept. 18:30"
+        }
+      ]
+    },
+    {
+      "id": "CMD-2026-0510",
+      "userId": "u1",
+      "status": "annulee",
+      "createdAt": "2026-09-03T08:40:00",
+      "market": "Marché Poto-Poto",
+      "items": [
+        {
+          "productId": "15",
+          "image": "https://images.unsplash.com/photo-1630623093145-f606591c2546?auto=format&fit=crop&w=400&q=80",
+          "name": "Gingembre frais",
+          "producerName": "Coopérative Kinkala",
+          "price": 2200,
+          "unit": "kg",
+          "quantity": 2
+        }
+      ],
+      "subtotal": 4400,
+      "deliveryFee": 0,
+      "total": 4400,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "3 sept. 08:40"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "current",
+          "date": "En cours"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "pending",
+          "date": ""
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "pending",
+          "date": ""
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "pending",
+          "date": ""
+        }
+      ],
+      "cancelReason": "Annulée par l'acheteuse"
+    },
+    {
+      "id": "CMD-2026-0505",
+      "userId": "u1",
+      "status": "livree",
+      "createdAt": "2026-08-30T10:00:00",
+      "market": "Marché Total",
+      "items": [
+        {
+          "productId": "14",
+          "image": "https://images.unsplash.com/photo-1730815048561-45df6f7f331d?auto=format&fit=crop&w=400&q=80",
+          "name": "Patates douces",
+          "producerName": "Ferme Nsona",
+          "price": 1100,
+          "unit": "tas",
+          "quantity": 5
+        },
+        {
+          "productId": "8",
+          "image": "https://images.unsplash.com/photo-1757283961570-682154747d9c?auto=format&fit=crop&w=400&q=80",
+          "name": "Manioc frais",
+          "producerName": "Les Jardins de Mindouli",
+          "price": 900,
+          "unit": "tas",
+          "quantity": 3
+        }
+      ],
+      "subtotal": 8200,
+      "deliveryFee": 2000,
+      "total": 10200,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "30 août 10:00"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "30 août 10:40"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "done",
+          "date": "30 août 13:30"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "done",
+          "date": "30 août 16:00"
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "done",
+          "date": "30 août 18:10"
+        }
+      ]
+    },
+    {
+      "id": "CMD-2026-0495",
+      "userId": "u1",
+      "status": "en_cours",
+      "createdAt": "2026-08-24T09:32:00",
+      "market": "Marché Total",
+      "items": [
+        {
+          "productId": "1",
+          "image": "https://images.unsplash.com/photo-1561136594-7f68413baa99?auto=format&fit=crop&w=400&q=80",
+          "name": "Tomates fraîches",
+          "producerName": "Ferme Moukoko",
+          "price": 1500,
+          "unit": "panier",
+          "quantity": 10
+        },
+        {
+          "productId": "2",
+          "image": "https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=400&q=80",
+          "name": "Carottes",
+          "producerName": "Les Jardins de Mindouli",
+          "price": 1200,
+          "unit": "tas",
+          "quantity": 5
+        },
+        {
+          "productId": "3",
+          "image": "https://images.unsplash.com/photo-1739159192920-7124e3babcaf?auto=format&fit=crop&w=400&q=80",
+          "name": "Poivrons verts",
+          "producerName": "Ferme Nsona",
+          "price": 1800,
+          "unit": "panier",
+          "quantity": 10
+        }
+      ],
+      "subtotal": 39000,
+      "deliveryFee": 2000,
+      "total": 41000,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "24 août 09:32"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "24 août 10:15"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "current",
+          "date": "En cours"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "pending",
+          "date": ""
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "pending",
+          "date": ""
+        }
+      ]
+    },
+    {
+      "id": "CMD-2026-0480",
+      "userId": "u1",
+      "status": "livree",
+      "createdAt": "2026-08-16T11:05:00",
+      "market": "Marché Poto-Poto",
+      "items": [
+        {
+          "productId": "4",
+          "image": "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=400&q=80",
+          "name": "Oignons rouges",
+          "producerName": "Coopérative Kinkala",
+          "price": 1000,
+          "unit": "tas",
+          "quantity": 8
+        },
+        {
+          "productId": "18",
+          "image": "https://images.unsplash.com/photo-1683536905403-ea18a3176d29?auto=format&fit=crop&w=400&q=80",
+          "name": "Amarante",
+          "producerName": "Coopérative Kinkala",
+          "price": 600,
+          "unit": "botte",
+          "quantity": 12
+        },
+        {
+          "productId": "6",
+          "image": "https://images.unsplash.com/photo-1784039484509-bedb3e576928?auto=format&fit=crop&w=400&q=80",
+          "name": "Aubergines",
+          "producerName": "Ferme Nsona",
+          "price": 1200,
+          "unit": "panier",
+          "quantity": 5
+        }
+      ],
+      "subtotal": 21200,
+      "deliveryFee": 2000,
+      "total": 23200,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "16 août 11:05"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "16 août 11:40"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "done",
+          "date": "16 août 14:00"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "done",
+          "date": "16 août 16:20"
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "done",
+          "date": "16 août 18:00"
+        }
+      ]
+    },
+    {
+      "id": "CMD-2026-0460",
+      "userId": "u1",
+      "status": "confirmee",
+      "createdAt": "2026-08-08T08:45:00",
+      "market": "Marché Total",
+      "items": [
+        {
+          "productId": "5",
+          "image": "https://images.unsplash.com/photo-1546860255-95536c19724e?auto=format&fit=crop&w=400&q=80",
+          "name": "Piments frais",
+          "producerName": "Ferme Moukoko",
+          "price": 2000,
+          "unit": "tas",
+          "quantity": 5
+        },
+        {
+          "productId": "7",
+          "image": "https://images.unsplash.com/photo-1611105637889-3afd7295bdbf?auto=format&fit=crop&w=400&q=80",
+          "name": "Choux pommés",
+          "producerName": "Coopérative Mouyondzi",
+          "price": 800,
+          "unit": "pièce",
+          "quantity": 10
+        }
+      ],
+      "subtotal": 18000,
+      "deliveryFee": 2000,
+      "total": 20000,
+      "timeline": [
+        {
+          "key": "passee",
+          "label": "Commande passée",
+          "state": "done",
+          "date": "8 août 08:45"
+        },
+        {
+          "key": "confirmee",
+          "label": "Confirmée",
+          "state": "done",
+          "date": "8 août 09:30"
+        },
+        {
+          "key": "preparation",
+          "label": "En préparation",
+          "state": "current",
+          "date": "En cours"
+        },
+        {
+          "key": "livraison",
+          "label": "En livraison",
+          "state": "pending",
+          "date": ""
+        },
+        {
+          "key": "livree",
+          "label": "Livrée",
+          "state": "pending",
+          "date": ""
+        }
+      ]
     }
   ],
   "favorites": [],

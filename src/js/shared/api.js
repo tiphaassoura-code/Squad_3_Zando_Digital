@@ -29,6 +29,14 @@ export const getUser = () => request('/user')
 export const getCart = () => request('/cart')
 export const getFavorites = () => request('/favorites')
 export const getSupport = () => request('/support')
+export const getOrders = () => request('/orders')
+
+/* ---- Commandes ---- */
+export const updateOrder = (id, patch) =>
+  request(`/orders/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify(patch)
+  })
 
 /* ---- Panier : CRUD complet sur la collection /cart ---- */
 export const createCartItem = (productId, quantity) =>
