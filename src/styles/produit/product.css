@@ -162,6 +162,9 @@
   overflow-x: auto;
   scrollbar-width: thin;
   scroll-snap-type: x proximity;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 .gallery-thumbs li { scroll-snap-align: start; }
 .gallery-thumb {

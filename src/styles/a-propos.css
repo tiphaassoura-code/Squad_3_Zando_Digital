@@ -17,7 +17,7 @@
   align-items: center;
   background: linear-gradient(135deg, var(--color-surface, #ffffff) 0%, #f8faf8 100%);
   padding: var(--space-10, 40px);
-  border-radius: var(--radius-2xl, 24px);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border, #e5e7eb);
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
 }
@@ -57,7 +57,7 @@
 
 .about-hero-img-wrapper {
   overflow: hidden;
-  border-radius: var(--radius-xl, 16px);
+  border-radius: var(--radius-lg);
   box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
 }
 
@@ -83,7 +83,7 @@
 .pillar-card {
   background: var(--color-surface, #ffffff);
   border: 1px solid var(--color-border, #e5e7eb);
-  border-radius: var(--radius-xl, 16px);
+  border-radius: var(--radius-lg);
   padding: var(--space-8, 32px) var(--space-6, 24px);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
@@ -124,7 +124,7 @@
   align-items: center;
   background: var(--color-surface, #ffffff);
   padding: var(--space-10, 40px);
-  border-radius: var(--radius-2xl, 24px);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border, #e5e7eb);
 }
 
@@ -149,7 +149,7 @@
 
 .story-banner {
   overflow: hidden;
-  border-radius: var(--radius-xl, 16px);
+  border-radius: var(--radius-lg);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
 }
 

@@ -210,7 +210,7 @@ function renderDirectory(producers, products, zones, favorites) {
     <section class="directory-results">
       <div class="results-toolbar">
         <div>
-          <p class="eyebrow">Le réseau MABOKO</p>
+          <p class="eyebrow">Le réseau ZANDO</p>
           <h2>Tous les producteurs <small>(${producers.length})</small></h2>
         </div>
         <label class="sort-select">
@@ -241,7 +241,7 @@ function renderDirectory(producers, products, zones, favorites) {
     <section class="directory-join">
       <div>
         <p class="eyebrow">Vous êtes producteur ?</p>
-        <h2>Rejoignez MABOKO et développez votre activité.</h2>
+        <h2>Rejoignez ZANDO et développez votre activité.</h2>
         <p>Accédez à plus de clients et vendez vos produits sans intermédiaire.</p>
         <a class="btn btn-primary" href="/devenir-producteur.html">Devenir producteur</a>
       </div>
