@@ -1,9 +1,5 @@
 /* ZANDO — Accueil : adaptations d'écran */
 
-/* Les 3 colonnes de .market-section sont des items de grille : sans
-   min-width:0, un descendant large (ex. la grille de produits) leur garde
-   sa largeur minimale de contenu et pousse toute la page en débordement
-   horizontal (voir le même correctif sur la page Commandes). */
 .categories,
 .products-area,
 .orders-sidebar {

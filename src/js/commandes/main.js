@@ -6,10 +6,6 @@ import * as api from "../shared/api.js"
   "use strict";
 
 /* ---------- CONFIG ---------- */
-  // Comme la page Marché : les données viennent de json-server via /api
-  // (proxy Vite → localhost:3001, voir src/js/shared/api.js). En cas
-  // d'échec, on retombe sur les données de secours ci-dessous plutôt que
-  // d'afficher une page vide.
   const USER_ID = "u1";
   const PAGE_SIZE = 3;
   const ACTIVE_STATUSES = ["en_attente", "confirmee", "en_cours"];
@@ -28,9 +24,7 @@ import * as api from "../shared/api.js"
   const currency = new Intl.NumberFormat("fr-FR").format;
   const fmtMoney = (n) => `${currency(Math.round(n))} FCFA`;
 
-  /* ---------- DONNÉES DE SECOURS ----------
-     Utilisées uniquement si json-server est injoignable (USE_API=true mais
-     fetch en échec), pour ne jamais afficher une page vide. */
+  /* ---------- DONNÉES DE SECOURS ---------- */
   const FALLBACK_ORDERS = [
   {
     "id": "CMD-2024-0448",
@@ -266,11 +260,7 @@ import * as api from "../shared/api.js"
   }
   el.addEventListener(event, handler);
 }
-  /* ---------- CHARGEMENT DES DONNÉES ----------
-     Même schéma que src/js/market/data.js : un seul Promise.all vers
-     json-server via le client /api partagé. Si l'appel échoue (API non
-     démarrée), on retombe silencieusement sur les données de secours et le
-     HTML statique déjà présent : la page ne casse jamais. */
+  /* ---------- CHARGEMENT DES DONNÉES ---------- */
   async function loadData() {
     let orders, user, support;
     try {
@@ -316,8 +306,6 @@ import * as api from "../shared/api.js"
     if (els.supportHours && support.hours) els.supportHours.textContent = support.hours;
   }
 
-  // Toujours calculées côté client à partir des commandes réelles, plutôt
-  // que codées en dur dans le HTML.
   function renderStats(orders) {
     const list = Array.isArray(orders) ? orders : [];
     const enCours = list.filter((o) => ACTIVE_STATUSES.includes(normalizeStatus(o.status))).length;
@@ -583,10 +571,7 @@ import * as api from "../shared/api.js"
     });
   }
 
-  /* ---------- ACTIONS: CANCEL / REORDER ----------
-     Mêmes endpoints que le reste du site (src/js/shared/api.js) : l'UI se
-     met à jour tout de suite, la persistance côté json-server ne la bloque
-     jamais si elle échoue. */
+  /* ---------- ACTIONS: CANCEL / REORDER ---------- */
   async function cancelOrder(id) {
     const order = state.orders.find((o) => o.id === id);
     if (!order) return;

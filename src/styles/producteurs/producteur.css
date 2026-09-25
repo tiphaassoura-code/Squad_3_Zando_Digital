@@ -1712,11 +1712,6 @@
     padding: var(--space-3);
   }
 }
-/* Sans cette règle, la version 2 colonnes ci-dessus (≤720px) gagne aussi sur
-   téléphone puisqu'elle est déclarée après la règle ≤520px plus haut dans ce
-   fichier : à spécificité égale, c'est la dernière règle qui correspond qui
-   l'emporte, pas la plus étroite. Deux colonnes à 375-414px écrase avatar,
-   note, stats et boutons dans ~165px — d'où les cartes cassées sur mobile. */
 @media (max-width: 520px) {
   .producer-list {
     grid-template-columns: 1fr;

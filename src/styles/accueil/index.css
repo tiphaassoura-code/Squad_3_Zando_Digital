@@ -1,5 +1,4 @@
-/* Accueil — réutilise la feuille du Marché pour les cartes produit,
-   la trame de catégories et la grille : même composant, même rendu. */
+/* Feuille de style de la page Accueil */
 
 @import "../shared.css";
 @import "../market/market.css";
