@@ -1,25 +1,1059 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accueil — ZANDO</title>
-  <meta name="description" content="ZANDO — Du champ au marché, sans intermédiaire.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MABOKO — Du champ au marché, sans intermédiaire.">
+    <title>Zando — Marché agricole</title>
 
-  <link rel="icon" href="/logo-zando-symbole.svg" type="image/svg+xml">
+    <link
+        rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/shared.css">
+    <link rel="stylesheet" href="src/styles/accueil/style.css">
 </head>
-<body data-page="accueil">
-  <header class="header" data-region="header"></header>
 
-  <main class="page">
-    <!-- Contenu de la page Accueil à construire ici. -->
-  </main>
+<body>
 
-  <script type="module" src="/src/js/shared/bootstrap.js"></script>
+    <!-- HEADER -->
+
+    <header class="site-header" id="header">
+        <div class="header-inner">
+
+            <a href="#" class="brand" id="brand">
+                <img
+                    class="brand-mark"
+                    id="brand-logo"
+                    src="src/images/logo (2).png"
+                    alt="Logo Zando"
+                >
+
+                <span class="brand-text">
+                    <strong>ZANDO</strong>
+                    <small>Du champ au marché, sans intermédiaire</small>
+                </span>
+            </a>
+
+            <input
+                type="checkbox"
+                id="menu-toggle"
+                class="menu-toggle"
+            >
+
+            <label
+                for="menu-toggle"
+                class="menu-button"
+                id="menu-button"
+                aria-label="Ouvrir le menu"
+            >
+                <i class="fi fi-rr-menu-burger"></i>
+            </label>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="#" id="nav-accueil" class="active">Accueil</a>
+                <a href="#marche" id="nav-marche">Marché</a>
+                <a href="#producteurs" id="nav-producteurs">Producteurs</a>
+                <a href="#apropos" id="nav-apropos">À propos</a>
+                <a href="#contact" id="nav-contact">Contact</a>
+            </nav>
+
+            <div class="header-actions" id="header-actions">
+
+                <div class="search-box" id="search-box">
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Rechercher un produit, un producteur..."
+                        autocomplete="off"
+                    >
+                    <i class="fi fi-rr-search" id="search-icon"></i>
+                </div>
+
+                <a
+                    href="panier.html"
+                    class="cart-button"
+                    id="cart-button"
+                >
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <span>Panier</span>
+                    <b id="product">0</b>
+                </a>
+
+                <a href="#compte" class="account" id="account-button">
+                    <span class="account-icon">
+                        <i class="fi fi-rr-user"></i>
+                    </span>
+
+                    <span>
+                        <strong id="account-name">Grâce</strong>
+                        <small id="account-role">Acheteuse</small>
+                    </span>
+
+                    <i class="fi fi-rr-angle-small-down"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <main id="main-content">
+
+        <!-- HERO -->
+
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-copy">
+
+                    <span class="eyebrow" id="hero-eyebrow">
+                        <i class="fi fi-rr-sparkles"></i>
+                        Plateforme des producteurs du Pool et de la Bouenza
+                    </span>
+
+                    <h1 id="hero-title">
+                        Des produits frais,
+                        <br>
+                        des prix justes,
+                        <br>
+                        plus de revenus pour tous.
+                    </h1>
+
+                    <p id="hero-description">
+                        Les maraîchers du Pool et de la Bouenza publient leurs
+                        produits et prix du jour. Commandez en gros directement,
+                        sans intermédiaires.
+                    </p>
+
+                    <div class="hero-buttons" id="hero-buttons">
+
+                        <a
+                            href="#marche"
+                            class="button button-primary"
+                            id="discover-market-button"
+                        >
+                            <i class="fi fi-rr-shopping-basket"></i>
+                            Découvrir le marché
+                        </a>
+
+                        <a
+                            href="#producteurs"
+                            class="button button-outline"
+                            id="producers-button"
+                        >
+                            Voir les producteurs
+                        </a>
+
+                    </div>
+
+                    <div class="hero-features" id="hero-features">
+
+                        <div class="hero-feature" id="feature-price">
+                            <i class="fi fi-rr-alarm-clock"></i>
+                            <span>
+                                <strong>Prix du jour</strong>
+                                Mise à jour quotidienne
+                            </span>
+                        </div>
+
+                        <div class="hero-feature" id="feature-wholesale">
+                            <i class="fi fi-rr-users"></i>
+                            <span>
+                                <strong>Achat en gros</strong>
+                                Commandes groupées
+                            </span>
+                        </div>
+
+                        <div class="hero-feature" id="feature-delivery">
+                            <i class="fi fi-rr-truck-side"></i>
+                            <span>
+                                <strong>Livraison rapide</strong>
+                                Sur vos marchés
+                            </span>
+                        </div>
+
+                        <div class="hero-feature" id="feature-payment">
+                            <i class="fi fi-rr-lock"></i>
+                            <span>
+                                <strong>Paiement sécurisé</strong>
+                                Simple et fiable
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MARKET -->
+
+        <section class="market-section" id="marche">
+
+            <aside class="categories" id="categories">
+
+                <h2 id="categories-title">Catégories</h2>
+
+                <a
+                    href="#"
+                    class="category active"
+                    id="category-all"
+                    data-category="all"
+                >
+                    <i class="fi fi-rr-apps"></i>
+                    <span>Tous les produits</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="category"
+                    id="category-vegetables"
+                    data-category="legumes"
+                >
+                    <i class="fi fi-rr-leaf"></i>
+                    <span>Légumes</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="category"
+                    id="category-fruits"
+                    data-category="fruits"
+                >
+                    <i class="fi fi-rr-apple-whole"></i>
+                    <span>Fruits</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="category"
+                    id="category-tubers"
+                    data-category="tubercules"
+                >
+                    <i class="fi fi-rr-carrot"></i>
+                    <span>Tubercules</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="category"
+                    id="category-spices"
+                    data-category="epices"
+                >
+                    <i class="fi fi-rr-pepper-hot"></i>
+                    <span>Épices</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="category"
+                    id="category-leaves"
+                    data-category="feuilles"
+                >
+                    <i class="fi fi-rr-leaf"></i>
+                    <span>Feuilles</span>
+                </a>
+
+                <a
+                    href="#"
+                    class="category"
+                    id="category-grains"
+                    data-category="cereales"
+                >
+                    <i class="fi fi-rr-wheat"></i>
+                    <span>Céréales</span>
+                </a>
+
+            </aside>
+
+
+            <div class="products-area" id="products-area">
+
+                <div class="section-heading" id="products-heading">
+
+                    <h2 id="products-title">
+                        Produits disponibles aujourd’hui
+                    </h2>
+
+                    <a href="#" id="view-all-products">
+                        Voir tout
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="products-grid" id="products-grid">
+
+                    <!-- PRODUCT 1 -->
+
+                    <article
+                        class="product-card"
+                        id="product-card-1"
+                        data-product-id="1"
+                        data-category="legumes"
+                        data-name="Tomates fraîches"
+                        data-price="1500"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                id="product-image-1"
+                                src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=700&q=85"
+                                alt="Tomates fraîches"
+                            >
+
+                            <span class="daily-badge">
+                                <i class="fi fi-rr-badge-percent"></i>
+                                Prix du jour
+                            </span>
+
+                            <button
+                                type="button"
+                                class="favorite"
+                                id="favorite-1"
+                                data-product-id="1"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fi fi-rr-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <h3 id="product-name-1">
+                                Tomates fraîches
+                            </h3>
+
+                            <p class="location">
+                                <i class="fi fi-rr-marker"></i>
+                                Pool — Kinkala
+                            </p>
+
+                            <div class="product-price">
+                                <strong id="product-price-1">1 500</strong>
+                                <span>FCFA</span>
+                                <small>/ panier</small>
+                            </div>
+
+                            <div
+                                class="quantity"
+                                id="quantity-1"
+                            >
+                                <button
+                                    type="button"
+                                    id="quantity-minus-1"
+                                    class="quantity-minus"
+                                    data-product-id="1"
+                                >
+                                    −
+                                </button>
+
+                                <span id="quantity-value-1">10</span>
+
+                                <button
+                                    type="button"
+                                    id="quantity-plus-1"
+                                    class="quantity-plus"
+                                    data-product-id="1"
+                                >
+                                    +
+                                </button>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="add-cart"
+                                id="add-cart-1"
+                                data-product-id="1"
+                            >
+                                Ajouter au panier
+                                <i class="fi fi-rr-shopping-cart-add"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 2 -->
+
+                    <article
+                        class="product-card"
+                        id="product-card-2"
+                        data-product-id="2"
+                        data-category="legumes"
+                        data-name="Carottes"
+                        data-price="1200"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                id="product-image-2"
+                                src="https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=700&q=85"
+                                alt="Carottes fraîches"
+                            >
+
+                            <span class="daily-badge">
+                                <i class="fi fi-rr-badge-percent"></i>
+                                Prix du jour
+                            </span>
+
+                            <button
+                                type="button"
+                                class="favorite"
+                                id="favorite-2"
+                                data-product-id="2"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fi fi-rr-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <h3 id="product-name-2">
+                                Carottes
+                            </h3>
+
+                            <p class="location">
+                                <i class="fi fi-rr-marker"></i>
+                                Pool — Mindouli
+                            </p>
+
+                            <div class="product-price">
+                                <strong id="product-price-2">1 200</strong>
+                                <span>FCFA</span>
+                                <small>/ tas</small>
+                            </div>
+
+                            <div
+                                class="quantity"
+                                id="quantity-2"
+                            >
+                                <button
+                                    type="button"
+                                    id="quantity-minus-2"
+                                    class="quantity-minus"
+                                    data-product-id="2"
+                                >
+                                    −
+                                </button>
+
+                                <span id="quantity-value-2">5</span>
+
+                                <button
+                                    type="button"
+                                    id="quantity-plus-2"
+                                    class="quantity-plus"
+                                    data-product-id="2"
+                                >
+                                    +
+                                </button>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="add-cart"
+                                id="add-cart-2"
+                                data-product-id="2"
+                            >
+                                Ajouter au panier
+                                <i class="fi fi-rr-shopping-cart-add"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 3 -->
+
+                    <article
+                        class="product-card"
+                        id="product-card-3"
+                        data-product-id="3"
+                        data-category="legumes"
+                        data-name="Poivrons verts"
+                        data-price="1800"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                id="product-image-3"
+                                src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=700&q=85"
+                                alt="Poivrons verts"
+                            >
+
+                            <span class="daily-badge">
+                                <i class="fi fi-rr-badge-percent"></i>
+                                Prix du jour
+                            </span>
+
+                            <button
+                                type="button"
+                                class="favorite"
+                                id="favorite-3"
+                                data-product-id="3"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fi fi-rr-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <h3 id="product-name-3">
+                                Poivrons verts
+                            </h3>
+
+                            <p class="location">
+                                <i class="fi fi-rr-marker"></i>
+                                Bouenza — Madingou
+                            </p>
+
+                            <div class="product-price">
+                                <strong id="product-price-3">1 800</strong>
+                                <span>FCFA</span>
+                                <small>/ panier</small>
+                            </div>
+
+                            <div
+                                class="quantity"
+                                id="quantity-3"
+                            >
+                                <button
+                                    type="button"
+                                    id="quantity-minus-3"
+                                    class="quantity-minus"
+                                    data-product-id="3"
+                                >
+                                    −
+                                </button>
+
+                                <span id="quantity-value-3">10</span>
+
+                                <button
+                                    type="button"
+                                    id="quantity-plus-3"
+                                    class="quantity-plus"
+                                    data-product-id="3"
+                                >
+                                    +
+                                </button>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="add-cart"
+                                id="add-cart-3"
+                                data-product-id="3"
+                            >
+                                Ajouter au panier
+                                <i class="fi fi-rr-shopping-cart-add"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 4 -->
+
+                    <article
+                        class="product-card"
+                        id="product-card-4"
+                        data-product-id="4"
+                        data-category="legumes"
+                        data-name="Oignons rouges"
+                        data-price="1000"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                id="product-image-4"
+                                src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=700&q=85"
+                                alt="Oignons rouges"
+                            >
+
+                            <span class="daily-badge">
+                                <i class="fi fi-rr-badge-percent"></i>
+                                Prix du jour
+                            </span>
+
+                            <button
+                                type="button"
+                                class="favorite"
+                                id="favorite-4"
+                                data-product-id="4"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fi fi-rr-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <h3 id="product-name-4">
+                                Oignons rouges
+                            </h3>
+
+                            <p class="location">
+                                <i class="fi fi-rr-marker"></i>
+                                Pool — Kinkala
+                            </p>
+
+                            <div class="product-price">
+                                <strong id="product-price-4">1 000</strong>
+                                <span>FCFA</span>
+                                <small>/ tas</small>
+                            </div>
+
+                            <div
+                                class="quantity"
+                                id="quantity-4"
+                            >
+                                <button
+                                    type="button"
+                                    id="quantity-minus-4"
+                                    class="quantity-minus"
+                                    data-product-id="4"
+                                >
+                                    −
+                                </button>
+
+                                <span id="quantity-value-4">8</span>
+
+                                <button
+                                    type="button"
+                                    id="quantity-plus-4"
+                                    class="quantity-plus"
+                                    data-product-id="4"
+                                >
+                                    +
+                                </button>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="add-cart"
+                                id="add-cart-4"
+                                data-product-id="4"
+                            >
+                                Ajouter au panier
+                                <i class="fi fi-rr-shopping-cart-add"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 5 -->
+
+                    <article
+                        class="product-card"
+                        id="product-card-5"
+                        data-product-id="5"
+                        data-category="feuilles"
+                        data-name="Légumes feuilles"
+                        data-price="800"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                id="product-image-5"
+                                src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=700&q=85"
+                                alt="Légumes feuilles"
+                            >
+
+                            <span class="daily-badge">
+                                <i class="fi fi-rr-badge-percent"></i>
+                                Prix du jour
+                            </span>
+
+                            <button
+                                type="button"
+                                class="favorite"
+                                id="favorite-5"
+                                data-product-id="5"
+                                aria-label="Ajouter aux favoris"
+                            >
+                                <i class="fi fi-rr-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <h3 id="product-name-5">
+                                Légumes feuilles
+                            </h3>
+
+                            <p class="location">
+                                <i class="fi fi-rr-marker"></i>
+                                Bouenza — Mouyondzi
+                            </p>
+
+                            <div class="product-price">
+                                <strong id="product-price-5">800</strong>
+                                <span>FCFA</span>
+                                <small>/ botte</small>
+                            </div>
+
+                            <div
+                                class="quantity"
+                                id="quantity-5"
+                            >
+                                <button
+                                    type="button"
+                                    id="quantity-minus-5"
+                                    class="quantity-minus"
+                                    data-product-id="5"
+                                >
+                                    −
+                                </button>
+
+                                <span id="quantity-value-5">12</span>
+
+                                <button
+                                    type="button"
+                                    id="quantity-plus-5"
+                                    class="quantity-plus"
+                                    data-product-id="5"
+                                >
+                                    +
+                                </button>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="add-cart"
+                                id="add-cart-5"
+                                data-product-id="5"
+                            >
+                                Ajouter au panier
+                                <i class="fi fi-rr-shopping-cart-add"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- PRODUCER BANNER -->
+
+                <div
+                    class="producer-banner"
+                    id="producteurs"
+                >
+
+                    <div class="producer-icon">
+                        <i class="fi fi-rr-user"></i>
+                    </div>
+
+                    <div>
+                        <strong id="producer-banner-title">
+                            Vous êtes producteur ?
+                        </strong>
+
+                        <p id="producer-banner-text">
+                            Rejoignez la plateforme et vendez directement vos produits.
+                        </p>
+                    </div>
+
+                    <a
+                        href="#compte"
+                        id="create-producer-account"
+                    >
+                        <i class="fi fi-rr-user-add"></i>
+                        Créer un compte producteur
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDERS SIDEBAR -->
+
+            <aside
+                class="orders-sidebar"
+                id="orders-sidebar"
+            >
+
+                <div class="orders-card" id="orders-card">
+
+                    <div class="side-heading">
+
+                        <h2 id="orders-title">
+                            Commandes en cours
+                        </h2>
+
+                        <a
+                            href="#commandes"
+                            id="view-all-orders"
+                        >
+                            Voir tout
+                        </a>
+
+                    </div>
+
+
+                    <!-- ORDER 1 -->
+
+                    <article
+                        class="order-item"
+                        id="order-1"
+                        data-order-id="C-2024-0156"
+                    >
+
+                        <div class="order-top">
+
+                            <strong>
+                                <i class="fi fi-rr-box"></i>
+                                Commande #C-2024-0156
+                            </strong>
+
+                            <span
+                                class="status orange"
+                                id="order-status-1"
+                            >
+                                En collecte
+                            </span>
+
+                        </div>
+
+                        <p id="order-products-1">
+                            12 produits • 85 000 FCFA
+                        </p>
+
+                        <p id="order-delivery-1">
+                            Livraison : Marché Total
+                        </p>
+
+                        <p id="order-estimation-1">
+                            Estimation : Aujourd’hui, 16h
+                        </p>
+
+                    </article>
+
+
+                    <!-- ORDER 2 -->
+
+                    <article
+                        class="order-item"
+                        id="order-2"
+                        data-order-id="C-2024-0155"
+                    >
+
+                        <div class="order-top">
+
+                            <strong>
+                                <i class="fi fi-rr-box"></i>
+                                Commande #C-2024-0155
+                            </strong>
+
+                            <span
+                                class="status blue"
+                                id="order-status-2"
+                            >
+                                En route
+                            </span>
+
+                        </div>
+
+                        <p id="order-products-2">
+                            8 produits • 62 500 FCFA
+                        </p>
+
+                        <p id="order-delivery-2">
+                            Livraison : Marché Poto-Poto
+                        </p>
+
+                        <p id="order-estimation-2">
+                            Estimation : Aujourd’hui, 14h
+                        </p>
+
+                    </article>
+
+
+                    <a
+                        href="#commandes"
+                        class="track-orders"
+                        id="track-orders"
+                    >
+                        <i class="fi fi-rr-truck-side"></i>
+                        Suivre mes commandes
+                    </a>
+
+                </div>
+
+
+                <!-- HELP -->
+
+                <div
+                    class="help-card"
+                    id="contact"
+                >
+
+                    <div class="help-icon">
+                        <i class="fi fi-rr-headset"></i>
+                    </div>
+
+                    <div>
+
+                        <strong id="help-title">
+                            Besoin d'aide ?
+                        </strong>
+
+                        <p id="help-text">
+                            Contactez-nous au
+                        </p>
+
+                        <b id="help-phone">
+                            +242 06 123 45 67
+                        </b>
+
+                        <small id="help-hours">
+                            Lun – Sam : 8h – 18h
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- WHY MABOKO -->
+
+        <section
+            class="why-section"
+            id="apropos"
+        >
+
+            <div class="why-heading">
+                <h2 id="why-title">
+                    Pourquoi choisir MABOKO ?
+                </h2>
+            </div>
+
+
+            <div
+                class="why-grid"
+                id="why-grid"
+            >
+
+                <article
+                    class="why-card"
+                    id="why-income"
+                >
+                    <div class="why-icon">
+                        <i class="fi fi-rr-chart-line-up"></i>
+                    </div>
+
+                    <div>
+                        <strong>Plus de revenus</strong>
+                        <p>
+                            Les producteurs gagnent plus en vendant directement.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article
+                    class="why-card"
+                    id="why-prices"
+                >
+                    <div class="why-icon">
+                        <i class="fi fi-rr-tags"></i>
+                    </div>
+
+                    <div>
+                        <strong>Meilleurs prix</strong>
+                        <p>
+                            Des prix plus justes grâce à la suppression des intermédiaires.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article
+                    class="why-card"
+                    id="why-fresh"
+                >
+                    <div class="why-icon">
+                        <i class="fi fi-rr-leaf"></i>
+                    </div>
+
+                    <div>
+                        <strong>Produits frais</strong>
+                        <p>
+                            Des produits frais récoltés du jour, directement des champs.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article
+                    class="why-card"
+                    id="why-local"
+                >
+                    <div class="why-icon">
+                        <i class="fi fi-rr-users-alt"></i>
+                    </div>
+
+                    <div>
+                        <strong>Soutien local</strong>
+                        <p>
+                            Vous soutenez l'agriculture locale et l'économie de nos régions.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer
+        class="site-footer"
+        id="footer"
+    >
+
+        <div id="footer-brand">
+            <strong>Zando</strong>
+            <span>Du champ au marché, sans intermédiaire.</span>
+        </div>
+
+        <p id="footer-copyright">
+            © 2026 MABOKO. Tous droits réservés.
+        </p>
+
+    </footer>
+
+
+    <script src="src/js/accueil/main.js"></script>
+
 </body>
 </html>

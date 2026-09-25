@@ -1,8 +1,3 @@
-/**
- * Panier — la commande groupée avant validation.
- * Les lignes sont regroupées par producteur : une commande ZANDO part
- * chez plusieurs fermes à la fois.
- */
 
 import * as api from '../shared/api.js'
 import { icon } from '../shared/icons.js'

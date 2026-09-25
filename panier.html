@@ -1,28 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panier — ZANDO</title>
-  <meta name="description" content="Votre commande groupée ZANDO : quantités, producteurs et total avant validation.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Votre panier ZANDO — Du champ au marché, sans intermédiaire."
+    >
 
-  <link rel="icon" href="/logo-zando-symbole.svg" type="image/svg+xml">
+    <title>ZANDO — Mon panier</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/panier/index.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    >
+
+    <link rel="stylesheet" href="src/styles/panier/style.css">
 </head>
-<body data-page="panier">
-  <a class="skip-link" href="#panier">Aller au panier</a>
 
-  <header class="header" data-region="header"></header>
+<body>
 
-  <main class="page" id="panier">
-    <div data-region="breadcrumb"></div>
-    <div data-region="cart"></div>
-  </main>
+    <header class="site-header">
+        <div class="header-inner">
 
-  <script type="module" src="/src/js/panier/main.js"></script>
+            <a href="index.html" class="brand" id="brand">
+                <img
+                    src="src/images/logo (2).png"
+                    alt="Logo ZANDO"
+                    class="brand-mark"
+                    id="brand-logo"
+                >
+
+                <span class="brand-text">
+                    <strong>ZANDO</strong>
+                    <small>Du champ au marché, sans intermédiaire</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#marche">Marché</a>
+                <a href="index.html#producteurs">Producteurs</a>
+                <a href="index.html#apropos">À propos</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="panier.html" class="cart-button active">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    <span>Panier</span>
+                    <b id="cart-counter">0</b>
+                </a>
+
+                <a href="#compte" class="account">
+                    <span class="account-icon">
+                        <i class="fi fi-rr-user"></i>
+                    </span>
+
+                    <span>
+                        <strong>Grâce</strong>
+                        <small>Acheteuse</small>
+                    </span>
+
+                    <i class="fi fi-rr-angle-small-down"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main class="cart-page">
+
+        <section class="cart-header">
+            <div>
+                <span class="section-label">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                    Votre sélection
+                </span>
+
+                <h1>Mon panier</h1>
+
+                <p id="cart-description">
+                    Retrouvez ici les produits que vous souhaitez commander.
+                </p>
+            </div>
+
+            <a href="index.html#marche" class="continue-shopping">
+                <i class="fi fi-rr-arrow-left"></i>
+                Continuer mes achats
+            </a>
+        </section>
+
+        <section class="cart-content">
+
+            <div class="cart-products">
+
+                <div class="cart-products-header">
+                    <h2>Produits sélectionnés</h2>
+                    <span id="items-count">0 article</span>
+                </div>
+
+                <div id="cart-items" class="cart-items"></div>
+
+                <div id="empty-cart" class="empty-cart">
+
+                    <div class="empty-cart-icon">
+                        <i class="fi fi-rr-shopping-cart"></i>
+                    </div>
+
+                    <h2>Votre panier est vide</h2>
+
+                    <p>
+                        Vous n'avez encore ajouté aucun produit à votre panier.
+                    </p>
+
+                    <a href="index.html#marche" class="primary-button">
+                        <i class="fi fi-rr-store-alt"></i>
+                        Découvrir le marché
+                    </a>
+
+                </div>
+
+            </div>
+
+            <aside class="summary-card">
+
+                <div class="summary-header">
+                    <h2>Résumé de la commande</h2>
+                    <i class="fi fi-rr-receipt"></i>
+                </div>
+
+                <div class="summary-lines">
+
+                    <div class="summary-line">
+                        <span>Sous-total</span>
+                        <strong id="subtotal">0 FCFA</strong>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Livraison</span>
+                        <strong id="delivery-fee">1 500 FCFA</strong>
+                    </div>
+
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="total-price">0 FCFA</strong>
+                </div>
+
+                <button
+                    type="button"
+                    class="checkout-button"
+                    id="checkout-button"
+                >
+                    Passer la commande
+                    <i class="fi fi-rr-arrow-right"></i>
+                </button>
+
+                <div class="secure-payment">
+
+                    <i class="fi fi-rr-shield-check"></i>
+
+                    <div>
+                        <strong>Paiement sécurisé</strong>
+                        <span>Vos informations sont protégées.</span>
+                    </div>
+
+                </div>
+
+                <div class="payment-methods">
+
+                    <span>Modes de paiement</span>
+
+                    <div class="payment-list">
+                        <span>VISA</span>
+                        <span>MTN</span>
+                        <span>AIRTEL</span>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <a href="index.html" class="footer-brand">
+                <img
+                    src="src/assets/images/image.png"
+                    alt="Logo ZANDO"
+                >
+
+                <div>
+                    <strong>ZANDO</strong>
+                    <span>Du champ au marché, sans intermédiaire</span>
+                </div>
+            </a>
+
+            <p>
+                © 2026 ZANDO. Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="panier.js"></script>
+
 </body>
 </html>
