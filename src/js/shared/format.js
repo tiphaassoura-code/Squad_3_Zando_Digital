@@ -1,28 +1,33 @@
 /** Formatage des valeurs affichées (français, FCFA). */
 
-const nf = new Intl.NumberFormat('fr-FR')
+const nf = new Intl.NumberFormat("fr-FR");
 
 /** 15000 -> "15 000" (espace insécable fine pour éviter les retours à la ligne). */
-export const formatNumber = (value) => nf.format(value).replace(/ |\s/g, ' ')
+export const formatNumber = (value) => nf.format(value).replace(/ |\s/g, " ");
 
 /** Prix complet avec devise : "1 500 FCFA". */
-export const formatPrice = (value) => `${formatNumber(value)} FCFA`
+export const formatPrice = (value) => `${formatNumber(value)} FCFA`;
 
 /** Note à une décimale : 4.8 -> "4,8". */
-export const formatRating = (value) => value.toFixed(1).replace('.', ',')
+export const formatRating = (value) => value.toFixed(1).replace(".", ",");
 
 /** Écart de prix par rapport à la veille. */
 export function priceTrend(product) {
-  const delta = product.price - product.priceYesterday
+  const priceYesterday = Number(product.priceYesterday ?? product.price);
+  const currentPrice = Number(product.price ?? 0);
+  const delta = currentPrice - priceYesterday;
 
-  if (delta === 0) return { direction: 'flat', delta: 0, label: 'stable depuis hier' }
+  if (delta === 0 || Number.isNaN(delta)) {
+    return { direction: "flat", delta: 0, label: "stable depuis hier" };
+  }
 
   return {
-    direction: delta < 0 ? 'down' : 'up',
+    direction: delta < 0 ? "down" : "up",
     delta: Math.abs(delta),
-    label: 'par rapport à hier'
-  }
+    label: "par rapport à hier",
+  };
 }
 
 /** "120 paniers disponibles" — pluriel géré par les données. */
-export const formatStock = (product) => `Disponible : ${formatNumber(product.stock)} ${product.stockUnit}`
+export const formatStock = (product) =>
+  `Disponible : ${formatNumber(product.stock)} ${product.stockUnit}`;

@@ -2,9 +2,13 @@
 
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
@@ -17,15 +21,41 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, p, figure { margin: 0; }
-ul, ol { margin: 0; padding: 0; list-style: none; }
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-img, svg { display: block; max-width: 100%; }
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
 
-button, input, select { font: inherit; color: inherit; }
-button { cursor: pointer; }
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* Focus visible conservé partout : exigence d'accessibilité du design system */
 :focus-visible {
@@ -60,7 +90,9 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(-200%);
   transition: transform var(--duration-base) var(--ease-out);
 }
-.skip-link:focus { transform: translateY(0); }
+.skip-link:focus {
+  transform: translateY(0);
+}
 
 /* Icônes Lucide : trait cohérent 1.8 px, jamais de remplissage par défaut */
 .icon {
@@ -69,8 +101,14 @@ a { color: inherit; text-decoration: none; }
   stroke-width: 1.8;
   flex: none;
 }
-.icon-sm { width: 16px; height: 16px; }
-.icon-lg { width: 24px; height: 24px; }
+.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+.icon-lg {
+  width: 24px;
+  height: 24px;
+}
 
 /* Boutons */
 .btn {
@@ -91,21 +129,31 @@ a { color: inherit; text-decoration: none; }
     transform var(--duration-fast) var(--ease-out),
     box-shadow var(--duration-fast) var(--ease-out);
 }
-.btn:active { transform: translateY(1px); }
-.btn[disabled] { opacity: .55; cursor: not-allowed; transform: none; }
+.btn:active {
+  transform: translateY(1px);
+}
+.btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
 
 .btn-primary {
   background: var(--color-primary);
   color: #fff;
 }
-.btn-primary:hover:not([disabled]) { background: var(--color-primary-dark); }
+.btn-primary:hover:not([disabled]) {
+  background: var(--color-primary-dark);
+}
 
 .btn-secondary {
   background: var(--color-surface);
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
-.btn-secondary:hover:not([disabled]) { background: var(--color-primary-light); }
+.btn-secondary:hover:not([disabled]) {
+  background: var(--color-primary-light);
+}
 
 .btn-ghost {
   background: transparent;
@@ -113,9 +161,14 @@ a { color: inherit; text-decoration: none; }
   min-height: 40px;
   padding: var(--space-2) var(--space-3);
 }
-.btn-ghost:hover { background: var(--color-surface-light); color: var(--color-text); }
+.btn-ghost:hover {
+  background: var(--color-surface-light);
+  color: var(--color-text);
+}
 
-.btn-block { width: 100%; }
+.btn-block {
+  width: 100%;
+}
 
 /* Champs */
 .field {
@@ -127,11 +180,13 @@ a { color: inherit; text-decoration: none; }
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  transition: border-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
 }
 .field:focus-within {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(23, 107, 58, .12);
+  box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.12);
 }
 .field input {
   flex: 1;
@@ -140,9 +195,15 @@ a { color: inherit; text-decoration: none; }
   background: transparent;
   font-size: var(--text-sm);
 }
-.field input:focus { outline: none; }
-.field input::placeholder { color: var(--color-text-secondary); }
-.field .icon { color: var(--color-text-secondary); }
+.field input:focus {
+  outline: none;
+}
+.field input::placeholder {
+  color: var(--color-text-secondary);
+}
+.field .icon {
+  color: var(--color-text-secondary);
+}
 
 /* Badges */
 .badge {
@@ -177,4 +238,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Le fond ne défile pas derrière un tiroir ouvert */
-body[data-locked] { overflow: hidden; }
+body[data-locked] {
+  overflow: hidden;
+}

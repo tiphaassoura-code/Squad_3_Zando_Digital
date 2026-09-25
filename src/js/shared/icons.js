@@ -78,6 +78,7 @@ const ICONS = {
   search: Search,
   'shopping-cart': ShoppingCart,
   sliders: SlidersHorizontal,
+  'sliders-horizontal': SlidersHorizontal,
   sprout: Sprout,
   store: Store,
   trash: Trash2,

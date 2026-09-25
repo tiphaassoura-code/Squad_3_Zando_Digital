@@ -6,20 +6,78 @@
   <title>À propos — ZANDO</title>
   <meta name="description" content="La mission de ZANDO et son fonctionnement.">
 
-  <link rel="icon" href="/logo-zando-symbole.svg" type="image/svg+xml">
+  <link rel="icon" href="logo-zando-symbole.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/shared.css">
+  
+  <link rel="stylesheet" href="src/styles/shared.css">
+  <link rel="stylesheet" href="src/styles/a-propos.css">
 </head>
 <body data-page="a-propos">
   <header class="header" data-region="header"></header>
 
-  <main class="page">
-    <!-- Contenu de la page À propos à construire ici. -->
+  <main class="page page-about">
+    <!-- SECTION HERO -->
+    <section class="about-hero">
+      <div class="about-hero-text">
+        <span class="badge-tag">À propos de ZANDO</span>
+        <h1>Soutenir l'agriculture locale,<br><span class="text-green">nourrir notre communauté.</span></h1>
+        <p>ZANDO est une plateforme qui connecte directement les producteurs locaux aux acheteurs (particuliers, restaurants et entreprises) pour un commerce plus juste, plus transparent et plus rentable.</p>
+        <div class="hero-actions">
+          <a href="marche.html" class="btn btn-primary">Découvrir le marché</a>
+        </div>
+      </div>
+      <div class="about-hero-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80" alt="Producteur local ZANDO" class="hero-img">
+      </div>
+    </section>
+
+    <!-- SECTION PILIERS -->
+    <section class="about-pillars">
+      <div class="pillar-card">
+        <div class="pillar-number">01</div>
+        <h3>Notre mission</h3>
+        <p>Faciliter l'accès aux produits agricoles frais et locaux tout en valorisant le travail des producteurs.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-number">02</div>
+        <h3>Notre vision</h3>
+        <p>Devenir la référence du commerce agricole digital en créant un écosystème durable et inclusif.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-number">03</div>
+        <h3>Nos valeurs</h3>
+        <p>Authenticité, équité, transparence et solidarité au cœur de chaque échange.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-number">04</div>
+        <h3>Notre engagement</h3>
+        <p>Promouvoir une agriculture responsable, respectueuse de l'environnement et bénéfique pour tous.</p>
+      </div>
+    </section>
+
+    <!-- SECTION HISTOIRE -->
+    <section class="about-story">
+      <div class="story-content">
+        <h2>Notre histoire</h2>
+        <p>ZANDO est né d'un constat simple : les agriculteurs travaillent dur pour produire des aliments de qualité, mais peinent parfois à trouver des débouchés à un prix juste. De l'autre côté, les acheteurs recherchent des produits frais et traçables.</p>
+        <p>Nous avons créé ZANDO pour rapprocher ces deux mondes, valoriser les récoltes et simplifier l'approvisionnement en circuits courts.</p>
+        <div class="story-actions">
+          <a href="contact.html" class="btn btn-secondary">Nous contacter</a>
+        </div>
+      </div>
+
+      <div class="story-banner">
+        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Champ agricole ZANDO">
+      </div>
+    </section>
   </main>
 
-  <script type="module" src="/src/js/shared/bootstrap.js"></script>
+  <script type="module" src="src/js/shared/bootstrap.js"></script>
 </body>
 </html>

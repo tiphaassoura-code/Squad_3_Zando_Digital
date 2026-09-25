@@ -72,6 +72,7 @@ const matchesSearch = (product, query, producers) => {
     product.zone,
     producer?.name,
     producer?.contact,
+    producer?.contact,
   ]
     .join(" ")
     .toLowerCase();
