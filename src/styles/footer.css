@@ -1,0 +1,99 @@
+/* ZANDO — Pied de page commun */
+
+.footer {
+  margin-top: var(--space-16);
+  background: var(--color-primary-dark);
+  color: rgba(255, 255, 255, .85);
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-10) var(--space-8);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: #fff;
+}
+.footer-mark {
+  height: 40px;
+  width: auto;
+  flex: none;
+  color: #fff;
+}
+.footer-logo strong {
+  display: block;
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+}
+.footer-logo small {
+  display: block;
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, .7);
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+.footer-contact .icon {
+  color: rgba(255, 255, 255, .7);
+}
+.footer-contact a {
+  color: #fff;
+  font-weight: var(--font-weight-medium);
+}
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+.footer-nav a,
+.footer-nav .is-soon {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: rgba(255, 255, 255, .85);
+}
+.footer-nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-nav .is-soon {
+  color: rgba(255, 255, 255, .45);
+  cursor: not-allowed;
+}
+
+.footer-copyright {
+  width: 100%;
+  margin-top: var(--space-2);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, .6);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .footer-inner {
+    padding: var(--space-8) var(--space-4);
+    justify-content: flex-start;
+  }
+}
