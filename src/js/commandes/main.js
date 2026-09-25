@@ -1,16 +1,18 @@
 
 import { icon } from "../shared/icons.js"
+import * as api from "../shared/api.js"
 
 (() => {
   "use strict";
 
 /* ---------- CONFIG ---------- */
-  // Passe à true pour brancher un vrai json-server à la place des données
-  // de démo ci-dessous. Adapte API_BASE au besoin.
-  const USE_API = true; // json-server est votre backend simulé : on l'utilise réellement
-  const API_BASE = "http://localhost:3001"; // adapte le port si besoin
+  // Comme la page Marché : les données viennent de json-server via /api
+  // (proxy Vite → localhost:3001, voir src/js/shared/api.js). En cas
+  // d'échec, on retombe sur les données de secours ci-dessous plutôt que
+  // d'afficher une page vide.
   const USER_ID = "u1";
   const PAGE_SIZE = 3;
+  const ACTIVE_STATUSES = ["en_attente", "confirmee", "en_cours"];
 
   const STATUS_META = {
     en_attente: { label: "En attente", badge: "badge--en_attente" },
@@ -245,6 +247,16 @@ import { icon } from "../shared/icons.js"
     confirmOk: $("#confirmOk"),
     confirmCancel: $("#confirmCancel"),
     logoutBtn: $("#logoutBtn"),
+    sbAvatar: $("#sbAvatar"),
+    sbName: $("#sbName"),
+    sbRole: $("#sbRole"),
+    sbSince: $("#sbSince"),
+    supportPhone: $("#supportPhone"),
+    supportHours: $("#supportHours"),
+    statTotal: $("#statTotal"),
+    statEnCours: $("#statEnCours"),
+    statLivrees: $("#statLivrees"),
+    statDepense: $("#statDepense"),
   };
 // la fonction on() est un utilitaire pour attacher des événements aux éléments DOM, avec une vérification de l'existence de l'élément pour éviter les erreurs si l'élément n'est pas trouvé.
   function on(el, event, handler) {
@@ -254,31 +266,75 @@ import { icon } from "../shared/icons.js"
   }
   el.addEventListener(event, handler);
 }
-  /* ---------- OPTIONNEL : fetch json-server ----------
-     Désactivé par défaut (USE_API=false). Si activé et que le fetch
-     échoue, on retombe silencieusement sur les données de démo : la page
-     ne casse jamais, elle affiche toujours quelque chose de correct. */
-  async function tryLoadFromApi() {
-    if (!USE_API) return;
+  /* ---------- CHARGEMENT DES DONNÉES ----------
+     Même schéma que src/js/market/data.js : un seul Promise.all vers
+     json-server via le client /api partagé. Si l'appel échoue (API non
+     démarrée), on retombe silencieusement sur les données de secours et le
+     HTML statique déjà présent : la page ne casse jamais. */
+  async function loadData() {
+    let orders, user, support;
     try {
-      const res = await fetch(`${API_BASE}/orders?userId=${USER_ID}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const orders = await res.json();
-      if (Array.isArray(orders) && orders.length) {
-        state.orders = orders;
-        state.pristine = false;
-        renderList();
-      }
+      [orders, user, support] = await Promise.all([
+        api.getOrders(),
+        api.getUser(),
+        api.getSupport(),
+      ]);
     } catch (err) {
-      console.warn("json-server indisponible, affichage des données de démo :", err.message);
+      console.warn("[commande.js] API indisponible, affichage des données de secours :", err.message);
+      return;
     }
+
+    const mine = Array.isArray(orders) ? orders.filter((o) => o.userId === USER_ID) : [];
+    if (mine.length) {
+      state.orders = mine;
+      renderList();
+    }
+
+    if (user) applyAccount(user);
+    if (support) applySupport(support);
+    renderStats(mine.length ? mine : state.orders);
+  }
+
+  function applyAccount(user) {
+    if (els.sbAvatar && user.avatar) els.sbAvatar.src = user.avatar;
+    if (els.sbAvatar) els.sbAvatar.alt = user.fullName || user.name || "";
+    if (els.sbName) els.sbName.textContent = user.name || "";
+    if (els.sbRole) els.sbRole.textContent = user.role || "";
+    if (els.sbSince && user.memberSince) {
+      const d = new Date(user.memberSince);
+      els.sbSince.textContent = isNaN(d)
+        ? user.memberSince
+        : d.toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+    }
+  }
+
+  function applySupport(support) {
+    if (els.supportPhone && support.phone) {
+      els.supportPhone.textContent = support.phone;
+      els.supportPhone.href = `tel:${support.phone.replace(/\s+/g, "")}`;
+    }
+    if (els.supportHours && support.hours) els.supportHours.textContent = support.hours;
+  }
+
+  // Toujours calculées côté client à partir des commandes réelles, plutôt
+  // que codées en dur dans le HTML.
+  function renderStats(orders) {
+    const list = Array.isArray(orders) ? orders : [];
+    const enCours = list.filter((o) => ACTIVE_STATUSES.includes(normalizeStatus(o.status))).length;
+    const livrees = list.filter((o) => normalizeStatus(o.status) === "livree");
+    const depense = livrees.reduce((sum, o) => sum + (o.total || 0), 0);
+
+    if (els.statTotal) els.statTotal.textContent = list.length;
+    if (els.statEnCours) els.statEnCours.textContent = enCours;
+    if (els.statLivrees) els.statLivrees.textContent = livrees.length;
+    if (els.statDepense) els.statDepense.textContent = fmtMoney(depense);
   }
 
   /* ---------- INIT ---------- */
   function init() {
     bindStaticEvents();
     bindOrderCardEvents(); // active chevron / "voir le détail" sur les 3 cartes statiques déjà dans le HTML
-    tryLoadFromApi(); // remplace les 3 commandes de secours par les vraies données json-server dès que le fetch réussit
+    loadData(); // remplace les commandes de secours par les vraies données json-server dès que l'appel réussit
   }
 
   /* ---------- FILTER / SORT / PAGINATE ---------- */
@@ -370,7 +426,7 @@ import { icon } from "../shared/icons.js"
         <div class="order-card__head-right">
           <span class="badge ${meta.badge}">${meta.label}</span>
           <button type="button" class="chevron-btn is-open" data-toggle="${order.id}" aria-label="Afficher/masquer le détail" aria-expanded="true">
-            ${icon("chevron-down", "icon--sm")}
+            ${icon("chevron-down", "icon-sm")}
           </button>
         </div>
       </div>
@@ -389,7 +445,7 @@ import { icon } from "../shared/icons.js"
                   }
                   <div class="totals-row total"><span>Total</span><b>${fmtMoney(order.total)}</b></div>
                   <button type="button" class="order-card__link" data-detail="${order.id}">
-                    Voir le détail ${icon("eye", "icon--sm")}
+                    Voir le détail ${icon("eye", "icon-sm")}
                   </button>
                 </div>
               </div>`
@@ -398,7 +454,7 @@ import { icon } from "../shared/icons.js"
                 <div class="order-card__totals">
                   <div class="totals-row total"><span>Total</span><b>${fmtMoney(order.total)}</b></div>
                   <button type="button" class="order-card__link" data-detail="${order.id}">
-                    Voir le détail ${icon("eye", "icon--sm")}
+                    Voir le détail ${icon("eye", "icon-sm")}
                   </button>
                 </div>
               </div>`
@@ -438,10 +494,10 @@ import { icon } from "../shared/icons.js"
       ${timeline
         .map((step) => {
           let dot;
-          if (step.state === "done") dot = icon("check", "icon--sm");
-          else if (step.state === "cancelled") dot = icon("x", "icon--sm");
-          else if (step.key === "livraison" || (step.state === "current")) dot = icon("truck", "icon--sm");
-          else if (step.key === "livree") dot = icon("badge-check", "icon--sm");
+          if (step.state === "done") dot = icon("check", "icon-sm");
+          else if (step.state === "cancelled") dot = icon("x", "icon-sm");
+          else if (step.key === "livraison" || (step.state === "current")) dot = icon("truck", "icon-sm");
+          else if (step.key === "livree") dot = icon("badge-check", "icon-sm");
           else dot = `<span class="timeline__bullet"></span>`;
           return `
         <div class="timeline__step ${step.state}">
@@ -461,13 +517,13 @@ import { icon } from "../shared/icons.js"
       els.pagination.innerHTML = "";
       return;
     }
-    let html = `<button ${p === 1 ? "disabled" : ""} data-page="${p - 1}" aria-label="Page précédente">${icon("chevron-left", "icon--sm")}</button>`;
+    let html = `<button ${p === 1 ? "disabled" : ""} data-page="${p - 1}" aria-label="Page précédente">${icon("chevron-left", "icon-sm")}</button>`;
     paginationRange(p, totalPages).forEach((item) => {
       html += item === "…"
         ? `<span class="pagination__ellipsis">…</span>`
         : `<button class="${item === p ? "is-active" : ""}" data-page="${item}" aria-current="${item === p ? "page" : "false"}">${item}</button>`;
     });
-    html += `<button ${p === totalPages ? "disabled" : ""} data-page="${p + 1}" aria-label="Page suivante">${icon("chevron-right", "icon--sm")}</button>`;
+    html += `<button ${p === totalPages ? "disabled" : ""} data-page="${p + 1}" aria-label="Page suivante">${icon("chevron-right", "icon-sm")}</button>`;
 
     els.pagination.innerHTML = html;
     $$("[data-page]", els.pagination).forEach((btn) =>
@@ -528,8 +584,9 @@ import { icon } from "../shared/icons.js"
   }
 
   /* ---------- ACTIONS: CANCEL / REORDER ----------
-     Simulées en local par défaut (aucun backend requis). Si USE_API=true,
-     on tente aussi de persister côté json-server, sans bloquer l'UI si ça échoue. */
+     Mêmes endpoints que le reste du site (src/js/shared/api.js) : l'UI se
+     met à jour tout de suite, la persistance côté json-server ne la bloque
+     jamais si elle échoue. */
   async function cancelOrder(id) {
     const order = state.orders.find((o) => o.id === id);
     if (!order) return;
@@ -538,35 +595,29 @@ import { icon } from "../shared/icons.js"
       ? { status: "annulee", cancelReason: "Annulée par l'acheteuse", deliveryFee: 0, total: order.subtotal }
       : { status: "annulee", cancelReason: "Annulée par l'acheteuse" });
 
-    if (USE_API) {
-      try {
-        await fetch(`${API_BASE}/orders/${id}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ status: order.status, cancelReason: order.cancelReason, deliveryFee: order.deliveryFee, total: order.total }),
-        });
-      } catch (err) {
-        console.warn("Annulation non persistée côté API :", err.message);
-      }
+    try {
+      await api.updateOrder(id, {
+        status: order.status,
+        cancelReason: order.cancelReason,
+        deliveryFee: order.deliveryFee,
+        total: order.total,
+      });
+    } catch (err) {
+      console.warn("[commande.js] Annulation non persistée côté API :", err.message);
     }
 
     renderList();
+    renderStats(state.orders);
     showToast("Commande annulée avec succès.", "success");
   }
 
   async function reorder(order) {
-    if (USE_API) {
-      try {
-        for (const i of order.items) {
-          await fetch(`${API_BASE}/cart`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(i),
-          });
-        }
-      } catch (err) {
-        console.warn("Ajout au panier non persisté côté API :", err.message);
+    try {
+      for (const i of order.items) {
+        if (i.productId) await api.createCartItem(i.productId, i.quantity);
       }
+    } catch (err) {
+      console.warn("[commande.js] Ajout au panier non persisté côté API :", err.message);
     }
     showToast(`${order.items.length} produit(s) ajouté(s) au panier.`, "success");
   }

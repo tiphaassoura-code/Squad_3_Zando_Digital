@@ -19,22 +19,32 @@ async function request(path, options = {}) {
 }
 
 /* ---- Lecture ---- */
-export const getProducts = () => request("/products");
-export const getCategories = () => request("/categories");
-export const getProducers = () => request("/producers");
-export const getZones = () => request("/zones");
-export const getBenefits = () => request("/benefits");
-export const getBanner = () => request("/banner");
-export const getUser = () => request("/user");
-export const getCart = () => request("/cart");
-export const getFavorites = () => request("/favorites");
-export const getSupport = () => request("/support");
+
+export const getProducts = () => request('/products')
+export const getCategories = () => request('/categories')
+export const getProducers = () => request('/producers')
+export const getZones = () => request('/zones')
+export const getBenefits = () => request('/benefits')
+export const getBanner = () => request('/banner')
+export const getUser = () => request('/user')
+export const getCart = () => request('/cart')
+export const getFavorites = () => request('/favorites')
+export const getSupport = () => request('/support')
+export const getOrders = () => request('/orders')
+
+/* ---- Commandes ---- */
+export const updateOrder = (id, patch) =>
+  request(`/orders/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify(patch)
+  })
 
 export const createProducer = (producer) =>
   request("/producers", { method: "POST", body: JSON.stringify(producer) });
 
 export const createProduct = (product) =>
   request("/products", { method: "POST", body: JSON.stringify(product) });
+
 
 /* ---- Panier : CRUD complet sur la collection /cart ---- */
 export const createCartItem = (productId, quantity) =>
